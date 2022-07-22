@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
+import ContactSection from '../components/ContactSection'
+import Header from '../components/Header'
 
 const ContactUs = () => {
   return (
-    <div className='app__contactus'>
-      <h1>Contact Us</h1>
+    <div>
+      <h1>Hello</h1>
     </div>
+    
   )
 }
 
-export default ContactUs
+export default ContactUs()
+
