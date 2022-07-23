@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const ContactUs = () => {
+
+export default function ContactUs() {
   return (
-    <div className='app__contactus'>
-      <h1>Contact Us</h1>
+    <div>
+      <ContactSection />
     </div>
   )
 }
 
-export default ContactUs
