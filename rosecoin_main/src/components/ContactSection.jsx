@@ -1,13 +1,22 @@
-import React from "react";
-import ContactUs from "../pages/ContactUs";
+import React from 'react';
+import styled from 'styled.component';
+import SectionTitle from './SectionTitle';
 
+const ContactSectionStyle = styled.div``;
 
-export default function ContactSection() {
-    return (
-        <div>
+export default function ContactSection (){
+
+    return(
+        <ContactSectionStyle>
             <div className="container">
-                <h1>Testing</h1>
+            <SectionTitle heading="Contact" subheading="Get in touch"/>    
+                <div className="contactSection__wrapper">
+                    <div className="left"></div>
+                    <div className="right"></div>
+                    </div>          
             </div>
-        </div>
+        </ContactSectionStyle>
+        
     )
+
 }

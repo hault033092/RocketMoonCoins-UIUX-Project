@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
-import ContactSection from '../components/ContactSection'
-import Header from '../components/Header'
 
-const ContactUs = () => {
+
+export default function ContactUs() {
   return (
     <div>
-      <h1>Hello</h1>
+      <ContactSection />
     </div>
-    
   )
 }
-
-export default ContactUs()
 
