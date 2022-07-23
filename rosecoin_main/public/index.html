@@ -2,12 +2,78 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+
     <title>Rosecoin</title>
   </head>
   <body>
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+        async
+      >
+          {
+          "symbols": [
+            {
+              "proName": "FOREXCOM:SPXUSD",
+              "title": "S&P 500"
+            },
+            {
+              "proName": "FOREXCOM:NSXUSD",
+              "title": "US 100"
+            },
+            {
+              "proName": "FX_IDC:EURUSD",
+              "title": "EUR/USD"
+            },
+            {
+              "proName": "BITSTAMP:BTCUSD",
+              "title": "Bitcoin"
+            },
+            {
+              "proName": "BITSTAMP:ETHUSD",
+              "title": "Ethereum"
+            }
+          ],
+          "showSymbolLogo": true,
+          "colorTheme": "dark",
+          "isTransparent": true,
+          "displayMode": "adaptive",
+          "locale": "en"
+        }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
     <div id="root"></div>
+    <!-- TradingView Widget BEGIN -->
+    <div
+      class="crypto-market-widget-container"
+      style="display: flex; justify-content: center"
+    >
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js"
+          async
+        >
+            {
+            "width": 1000,
+            "height": 490,
+            "defaultColumn": "overview",
+            "screener_type": "crypto_mkt",
+            "displayCurrency": "USD",
+            "colorTheme": "dark",
+            "locale": "en",
+            "isTransparent": true
+          }
+        </script>
+      </div>
+    </div>
+    <!-- TradingView Widget END -->
   </body>
 </html>
