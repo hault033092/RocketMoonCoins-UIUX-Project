@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 import styled from 'styled-components'
-import { FaSearch, FaUserAlt } from 'react-icons/fa'
+import { FaSearch, FaUserCircle } from 'react-icons/fa'
 
 const TopNavBar = () => {
+  const [toggleDropdown, setToggleDropdown] = useState(false)
+
   return (
     <NavContainer>
       <NavLogo to='/'>
@@ -28,9 +30,17 @@ const TopNavBar = () => {
 
       <VerticalLine />
 
-      <AccountLogo type='button'>
-        <FaUserAlt />
-      </AccountLogo>
+      <AccountLogo
+        onClick={() => {
+          setToggleDropdown(!toggleDropdown)
+        }}
+      />
+      {toggleDropdown && (
+        <DropDownContainer>
+          <DropDownLinks>SIGN UP</DropDownLinks>
+          <DropDownLinks>LOGIN</DropDownLinks>
+        </DropDownContainer>
+      )}
     </NavContainer>
   )
 }
@@ -40,35 +50,56 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 5rem;
+  padding: 1rem 5rem;
 `
 
 const NavLogo = styled(Link)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 1rem;
 
   img {
-    width: 250px;
-    height: 150px;
+    width: 15rem;
   }
 `
 const NavLinkContainer = styled.ul`
+  flex: 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 4rem;
 `
 
 const NavLinks = styled(Link)`
-  margin: 0 3rem;
+  margin: 0 0.75rem;
   text-decoration: none;
-  color: #f1e6cb;
-  &:hover {
-    border-bottom: 1px solid #f1e6cb;
+  color: #ebd192;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #f1e6cb;
+    transition: width 0.3s;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 `
 
+// const RightNav = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// `
+
 const FormStyle = styled.form`
   padding-left: 10rem;
+
   div {
     width: 100%;
     position: relative;
@@ -84,6 +115,7 @@ const FormStyle = styled.form`
     border-radius: 1rem;
     outline: none;
     width: 100%;
+    transition: 0.5s ease;
   }
   svg {
     position: absolute;
@@ -96,22 +128,50 @@ const FormStyle = styled.form`
 
 const VerticalLine = styled.div`
   width: 1px;
-  height: 70px;
+  height: 5rem;
+  margin: 0 2rem;
   background-color: #ebd192;
 `
 
-const AccountLogo = styled.button`
-  width: 90px;
-  height: 90px;
-  border-radius: 3rem;
-  background: #ebd192;
+// const AccountContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   position: ;
 
-  svg {
-    position: relative;
-    width: 3rem;
-    height: 3rem;
-    color: #090e38;
-  }
+//   margin ul {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     margin: 0;
+//     padding: 0;
+//   }
+// `
+
+const AccountLogo = styled(FaUserCircle)`
+  width: 5rem;
+  height: 5rem;
+  color: #ebd192;
+`
+
+const DropDownContainer = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  margin-top: 8rem;
+  margin-right: 4.5rem;
+  background-color: #f1e6cb;
+`
+
+const DropDownLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: #090e38;
+  border: 1px solid;
+  width: 5rem;
+  height: 2.5rem;
+  align-items: center;
 `
 
 export default TopNavBar

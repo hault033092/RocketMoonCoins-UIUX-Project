@@ -1,11 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
+import Promoted from '../components/Promoted'
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <HomeContainer>
+      <Promoted />
+    </HomeContainer>
   )
 }
+
+const HomeContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
 
 export default Home
