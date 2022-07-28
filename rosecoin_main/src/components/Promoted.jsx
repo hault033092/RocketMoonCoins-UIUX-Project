@@ -47,7 +47,7 @@ const Promoted = () => {
 }
 
 const Container = styled.div`
-  margin: 4rem 0;
+  margin: 2rem 0;
   width: 50%;
   height: 15rem;
   border-radius: 5px;

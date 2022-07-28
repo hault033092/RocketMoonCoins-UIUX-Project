@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 
-export default function SectionTitle() {
+// export default function SectionTitle() {
 
-    return(
+//     return(
 
-        <div><h1>THIS IS A HEADING</h1></div>
+//         <div><h1>THIS IS A HEADING</h1></div>
 
-    )
+//     )
 
-}
+// }

@@ -151,6 +151,9 @@ const AccountLogo = styled(FaUserCircle)`
   width: 5rem;
   height: 5rem;
   color: #ebd192;
+  &:hover {
+    transform: scale(1.25);
+  }
 `
 
 const DropDownContainer = styled.ul`
@@ -159,6 +162,7 @@ const DropDownContainer = styled.ul`
   align-items: center;
   position: absolute;
   right: 0;
+  width: 50px;
   margin-top: 8rem;
   margin-right: 4.5rem;
   background-color: #f1e6cb;
@@ -169,8 +173,6 @@ const DropDownLinks = styled.div`
   flex-direction: column;
   color: #090e38;
   border: 1px solid;
-  width: 5rem;
-  height: 2.5rem;
   align-items: center;
 `
 
