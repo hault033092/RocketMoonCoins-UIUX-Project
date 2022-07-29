@@ -6,21 +6,21 @@ const AdBannerSmall = () => {
     <Container>
       <iframe
         src='https://giphy.com/embed/n4YhRfDxqcyDGIEgwm'
-        width='520'
+        width='350'
         height='150'
         frameBorder='0'
         class='giphy-embed'
       ></iframe>
       <iframe
         src='https://giphy.com/embed/n4YhRfDxqcyDGIEgwm'
-        width='520'
+        width='350'
         height='150'
         frameBorder='0'
         class='giphy-embed'
       ></iframe>
       <iframe
         src='https://giphy.com/embed/n4YhRfDxqcyDGIEgwm'
-        width='520'
+        width='350'
         height='150'
         frameBorder='0'
         class='giphy-embed'
@@ -32,7 +32,6 @@ const AdBannerSmall = () => {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  margin: 0 30rem;
   margin-top: 2rem;
 `
 
