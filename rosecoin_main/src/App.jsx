@@ -19,8 +19,7 @@ const App = () => {
 const HorizontalLine = styled.div`
   width: 100%;
   height: 1px;
-  margin: 5px 0;
-  background-color: #f1e6cb;
+  background-color: #090e38;
 `
 
 export default App

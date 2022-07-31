@@ -1,16 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const AdBannerLarge = () => {
   return (
     <Container>
-      <iframe
-        src='https://giphy.com/embed/1YDSmdpQWEZ0uvAIQT'
-        width='480'
-        height='270'
-        frameBorder='0'
-        class='giphy-embed'
-      ></iframe>
+      <Link to='/contactus'>
+        <img src='https://t.me/BullRunDev' alt='' />
+      </Link>
     </Container>
   )
 }

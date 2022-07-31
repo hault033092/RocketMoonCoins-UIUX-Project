@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 
 const Coins = () => {
   const [coins, setCoins] = useState([])
@@ -17,17 +18,18 @@ const Coins = () => {
         `https://api.coinstats.app/public/v1/coins`
       )
       const data = await connectApi.json()
-      localStorage.setItem('coins', JSON.stringify(data))
-      setCoins(data)
-      console.log(coins)
+      localStorage.setItem('coins', JSON.stringify(data.coins))
+      setCoins(data.coins)
     }
   }
 
+  console.log(coins)
+
   return (
-    <div>
+    <Container>
       <h1>Coins</h1>
-      <table>
-        <thead>
+      <Table>
+        <Thead>
           <tr>
             <td>Rank</td>
             <td>Name</td>
@@ -37,29 +39,72 @@ const Coins = () => {
             <td>Available Supply</td>
             <td>Volume(24hrs)</td>
           </tr>
-        </thead>
+        </Thead>
 
-        <tbody>
-          {coins.map((coin, coinid) => {
+        <Tbody>
+          {coins.map((coin) => {
             return (
               <>
-                <tr id={coinid}>
-                  <td>{coin.rank}</td>
-                  <td>
+                <tr id={coin.id}>
+                  <td className='rank'>{coin.rank}</td>
+                  <td className='logo'>
                     <a href={coin.websiteUrl}>
-                      <img src={coin.icon} alt='coin logo' />
-                      <p>{coin.name}</p>
+                      <img src={coin.icon} alt='coin logo' width='30px' />
                     </a>
+                    <p>{coin.name}</p>
                   </td>
-                  <td></td>
+                  <td className='symbol'>{coin.symbol}</td>
+                  <td>{coin.marketCap}</td>
+                  <td>{coin.price}</td>
+                  <td>{coin.availableSupply}</td>
+                  <td>{coin.volume}</td>
                 </tr>
               </>
             )
           })}
-        </tbody>
-      </table>
-    </div>
+        </Tbody>
+      </Table>
+    </Container>
   )
 }
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Table = styled.table`
+  width: 1000px;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
+`
+
+const Thead = styled.thead`
+  background-color: rgb(44, 44, 44);
+  text-align: center;
+
+  td {
+    color: #ebd192;
+  }
+`
+const Tbody = styled.tbody`
+  tr {
+    text-align: right;
+  }
+
+  &.rank {
+    text-align: center;
+    font-weight: bold;
+  }
+  &.logo {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10%;
+    gap: 10px;
+  }
+  &.symbol {
+    text-align: center;
+  }
+`
 export default Coins

@@ -50,7 +50,7 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5rem;
+  padding: 0rem 5rem;
 `
 
 const NavLogo = styled(Link)`
@@ -74,7 +74,7 @@ const NavLinkContainer = styled.ul`
 const NavLinks = styled(Link)`
   margin: 0 0.75rem;
   text-decoration: none;
-  color: #ebd192;
+  color: #090e38;
   display: inline-block;
 
   &::after {
@@ -82,7 +82,7 @@ const NavLinks = styled(Link)`
     display: block;
     width: 0;
     height: 1px;
-    background: #f1e6cb;
+    background: #090e38;
     transition: width 0.3s;
   }
 
