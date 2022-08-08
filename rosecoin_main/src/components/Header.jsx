@@ -112,7 +112,7 @@ const InnerLeft = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 18vh;
+  height: 100px;
   margin-left: 2rem;
 `
 
