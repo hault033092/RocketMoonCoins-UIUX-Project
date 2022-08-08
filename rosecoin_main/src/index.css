@@ -5,6 +5,13 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --golden: #ebd192;
+  --lightgolden: #f1e6cb;
+  --midnightdark: #1a1a1a;
+  --navyviolet: #090e38;
+}
+
 body {
   background: #f2f6d8;
   margin: 0;

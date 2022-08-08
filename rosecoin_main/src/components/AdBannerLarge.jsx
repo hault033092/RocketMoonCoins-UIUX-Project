@@ -1,20 +1,54 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import images from '../assets/LargeBannerDemo.jpg'
 
 const AdBannerLarge = () => {
   return (
     <Container>
-      <Link to='/contactus'>
-        <img src='https://t.me/BullRunDev' alt='' />
-      </Link>
+      <Splide
+        options={{
+          rewind: true,
+          drag: true,
+          autoplay: true,
+          arrows: true,
+          pagination: true,
+        }}
+      >
+        <SplideSlide className='SlideItem'>
+          <Link to='/contactus'>
+            <img
+              src={images}
+              alt='large ad banner'
+              style={{ width: '1000px', height: '250px' }}
+            />
+          </Link>
+        </SplideSlide>
+        <SplideSlide className='SlideItem'>
+          <Link to='/contactus'>
+            <img
+              src={images}
+              alt='large ad banner'
+              style={{ width: '1000px', height: '250px' }}
+            />
+          </Link>
+        </SplideSlide>
+        <SplideSlide className='SlideItem'>
+          <Link to='/contactus'>
+            <img
+              src={images}
+              alt='large ad banner'
+              style={{ width: '1000px', height: '250px' }}
+            />
+          </Link>
+        </SplideSlide>
+      </Splide>
     </Container>
   )
 }
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 0 30rem;
+  width: 1000px;
 `
 
 export default AdBannerLarge

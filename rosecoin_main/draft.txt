@@ -1,0 +1,42 @@
+const AccountLogo = styled(FaUserCircle)`
+  width: 5rem;
+  height: 5rem;
+  color: var(--golden);
+  &:hover {
+    transform: scale(1.25);
+  }
+`
+
+const DropDownContainer = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  width: 50px;
+  margin-top: 8rem;
+  margin-right: 4.5rem;
+  background-color: var(--lightgolden);
+`
+
+const DropDownLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: var(--navyviolet);
+  border: 1px solid;
+  align-items: center;
+`
+
+<AccountLogo
+          onClick={() => {
+            setToggleDropdown(!toggleDropdown)
+          }}
+        />
+        {toggleDropdown && (
+          <DropDownContainer>
+            <DropDownLinks>SIGN UP</DropDownLinks>
+            <DropDownLinks>LOGIN</DropDownLinks>
+          </DropDownContainer>
+        )}
+
+  const [toggleDropdown, setToggleDropdown] = useState(false)

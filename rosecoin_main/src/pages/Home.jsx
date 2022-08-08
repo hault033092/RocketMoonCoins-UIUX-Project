@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import Coins from '../components/Coins'
 import Promoted from '../components/Promoted'
 import AdBannerSmall from '../components/AdBannerSmall'
 import AdBannerLarge from '../components/AdBannerLarge'
+import CryptoList from '../components/CryptoList'
+import CoinsList from '../data/CoinsList'
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       <AdBannerSmall />
       <Promoted />
       <AdBannerLarge />
-      <Coins />
+      <CoinsList />
     </HomeContainer>
   )
 }
