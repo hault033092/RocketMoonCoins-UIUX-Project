@@ -99,16 +99,16 @@ const StyledFormWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   padding: 0 20px;
+  margin: 3rem;
 `
 
 const StyledForm = styled.form`
-  width: 100%;
-  max-width: 700px;
-  padding: 40px;
+  width: 50%;
+  max-width:100%;
+  padding: 2rem;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 1rem;
   box-sizing: border-box;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 `

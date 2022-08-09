@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import Button from '../components/Button';
+import Icon from '../components/Icon';
+import Input from '../components/Input';
 import {
   FaFacebookSquare,
   FaTwitterSquare,
