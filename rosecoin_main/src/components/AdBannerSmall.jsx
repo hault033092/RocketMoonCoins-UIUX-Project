@@ -1,38 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import images from '../assets/images/banner_demo.jpg'
 
 const AdBannerSmall = () => {
   return (
     <Container>
-      <iframe
-        src='https://giphy.com/embed/n4YhRfDxqcyDGIEgwm'
-        width='350'
-        height='150'
-        frameBorder='0'
-        class='giphy-embed'
-      ></iframe>
-      <iframe
-        src='https://giphy.com/embed/n4YhRfDxqcyDGIEgwm'
-        width='350'
-        height='150'
-        frameBorder='0'
-        class='giphy-embed'
-      ></iframe>
-      <iframe
-        src='https://giphy.com/embed/n4YhRfDxqcyDGIEgwm'
-        width='350'
-        height='150'
-        frameBorder='0'
-        class='giphy-embed'
-      ></iframe>
+      <Link to='/contactus'>
+        <img src={images} alt='' />
+      </Link>
+      <Link to='/contactus'>
+        <img src={images} alt='' />
+      </Link>
+      <Link to='/contactus'>
+        <img src={images} alt='' />
+      </Link>
     </Container>
   )
 }
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
-  margin-top: 2rem;
+  justify-content: space-around;
+  /* margin: 3rem 0rem; */
+  width: 70%;
+  height: 150px;
+
+  img {
+    width: 320px;
+    height: 100px;
+  }
 `
 
 export default AdBannerSmall
