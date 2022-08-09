@@ -20,8 +20,9 @@ const Home = () => {
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  margin: 3rem 0;
 `
 
 export default Home

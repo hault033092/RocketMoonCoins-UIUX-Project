@@ -1,18 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import logo from '../assets/rosecoin_footer_logo.svg'
-import {
-  FaLinkedin,
-  FaFacebookSquare,
-  FaTwitterSquare,
-  FaTelegram,
-} from 'react-icons/fa'
+import logo from '../assets/logos/rosecoin_footer_logo.svg'
+import icons from '../assets/icons/icons'
 
 const Footer = () => {
   return (
     <Container>
-      <img src={logo} alt='footer logo' />
+      <img className='footer-logo' src={logo} alt='footer logo' />
       <NavContainer>
         <Link to='/submitcoin'>SUBMIT COIN</Link>
         <Link to='/promote'>PROMOTE</Link>
@@ -21,16 +16,16 @@ const Footer = () => {
       </NavContainer>
       <ContactInfo>
         <a href='http://facebook.com/rosecoinweb3' target='_blank'>
-          <FaFacebookSquare />
+          <img src={icons.facebook} alt='' />
         </a>
         <a href='http://bit.ly/3zjSEiM' target='_blank'>
-          <FaLinkedin />
+          <img src={icons.linkedin} alt='' />
         </a>
         <a href='https://t.me/+pUHV2j1VFpR' target='_blank'>
-          <FaTelegram />
+          <img src={icons.telegram} alt='' />
         </a>
         <a href='https://twitter.com/RoseCoin96' target='_blank'>
-          <FaTwitterSquare />
+          <img src={icons.twitter} alt='' />
         </a>
       </ContactInfo>
     </Container>
@@ -45,7 +40,7 @@ const Container = styled.div`
   height: 25vh;
   background: var(--midnightdark);
 
-  img {
+  .footer-logo {
     width: 150px;
     height: 150px;
   }
@@ -65,13 +60,8 @@ const NavContainer = styled.div`
 const ContactInfo = styled.div`
   display: flex;
   width: 15rem;
+  height: relative;
   justify-content: space-around;
-
-  svg {
-    color: var(--golden);
-    width: 3rem;
-    height: 3rem;
-  }
 `
 
 export default Footer

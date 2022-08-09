@@ -1,14 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/rosecoin_header_logo.svg'
+import logo from '../assets/logos/rosecoin_header_logo.svg'
 import styled from 'styled-components'
-import {
-  FaSearch,
-  FaLinkedin,
-  FaFacebookSquare,
-  FaTwitterSquare,
-  FaTelegram,
-} from 'react-icons/fa'
+import icons from '../assets/icons/icons'
+import { FaSearch } from 'react-icons/fa'
 
 const Header = () => {
   return (
@@ -38,34 +33,37 @@ const Header = () => {
 
       <HeaderRight>
         <ContactInfo>
-          <a
-            href='http://facebook.com/rosecoinweb3'
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            <FaFacebookSquare />
-          </a>
-          <a
-            href='http://bit.ly/3zjSEiM'
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href='https://t.me/+pUHV2j1VFpR'
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            <FaTelegram />
-          </a>
-          <a
-            href='https://twitter.com/RoseCoin96'
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            <FaTwitterSquare />
-          </a>
+          <h2>JOIN US AT</h2>
+          <div>
+            <a
+              href='http://facebook.com/rosecoinweb3'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <img src={icons.facebook} alt='' />
+            </a>
+            <a
+              href='http://bit.ly/3zjSEiM'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <img src={icons.linkedin} alt='' />
+            </a>
+            <a
+              href='https://t.me/+pUHV2j1VFpR'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <img src={icons.telegram} alt='' />
+            </a>
+            <a
+              href='https://twitter.com/RoseCoin96'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <img src={icons.twitter} alt='' />
+            </a>
+          </div>
         </ContactInfo>
 
         <VerticalLine />
@@ -85,9 +83,10 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10vh 3rem;
+  padding: 0rem 3rem;
   width: 100%;
-  height: 10rem;
+  height: 150px;
+  box-shadow: 3px 3px 8px var(--darkgolden);
   background: var(--navyviolet);
 `
 
@@ -96,6 +95,7 @@ const HeaderLeft = styled.div`
   /* justify-content: space-a; */
   align-items: center;
   width: 90rem;
+  height: 80%;
   margin-left: 5rem;
 `
 
@@ -103,8 +103,9 @@ const HeaderRight = styled.div`
   display: flex;
   justify-content: flex-end;
   /* align-items: center; */
-  height: 15vh;
+  /* height: 15vh; */
   width: 50rem;
+  height: 80%;
   margin-right: 5rem;
 `
 
@@ -113,13 +114,7 @@ const InnerLeft = styled.div`
   flex-direction: column;
   justify-content: space-around;
   height: 100px;
-  margin-left: 2rem;
-`
-
-const LogoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0rem 2rem;
 `
 
 const NavLogo = styled(Link)`
@@ -128,12 +123,14 @@ const NavLogo = styled(Link)`
 
   img {
     width: 220px;
+    height: relative;
   }
 `
 const NavLinkContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: relative;
 `
 
 const NavLinks = styled(Link)`
@@ -141,6 +138,8 @@ const NavLinks = styled(Link)`
   text-decoration: none;
   color: var(--golden);
   display: inline-block;
+  font-family: var(--font-main);
+  font-size: medium;
 
   &::after {
     content: '';
@@ -159,23 +158,18 @@ const NavLinks = styled(Link)`
 const ContactInfo = styled.div`
   display: flex;
   width: 15rem;
-  height: 15vh;
+  height: relative;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 
   svg {
-    color: var(--golden);
     width: 3rem;
     height: 3rem;
   }
 `
 
-const SearchContainer = styled.div`
-  display: flex;
-`
-
 const FormStyle = styled.form`
-  /* width: 100%; */
   position: relative;
 
   input {
@@ -200,8 +194,11 @@ const FormStyle = styled.form`
 `
 
 const VerticalLine = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1px;
-  height: 100%;
+  height: relative;
   margin: 0 2rem;
   background-color: var(--golden);
 `
@@ -209,21 +206,24 @@ const VerticalLine = styled.div`
 const UserLinksContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   text-decoration: none;
+  height: relative;
 `
 
 const UserLinks = styled(Link)`
   text-decoration: none;
   color: var(--golden);
+  font-family: var(--font-main);
+  font-size: larger;
 `
 
 const Button = styled.button`
-  padding: 10px 20px;
+  padding: 15px 25px;
   background: var(--lightgolden);
-  border: 2px solid var(--golden);
-  border-radius: 20px;
+  border: 3px solid var(--darkgolden);
+  border-radius: 25px;
 
   a {
     color: var(--navyviolet);

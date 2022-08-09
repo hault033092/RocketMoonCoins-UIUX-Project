@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
-import images from '../assets/LargeBannerDemo.jpg'
+import images from '../assets/images/banner_demo.jpg'
 
 const AdBannerLarge = () => {
   return (
@@ -49,6 +49,7 @@ const AdBannerLarge = () => {
 }
 const Container = styled.div`
   width: 1000px;
+  margin: 3rem;
 `
 
 export default AdBannerLarge

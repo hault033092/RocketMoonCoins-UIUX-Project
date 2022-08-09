@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
-import images from '../assets/images.jsx'
+import images from '../assets/images/images.jsx'
 
 const Promoted = () => {
   return (
@@ -47,9 +47,9 @@ const Promoted = () => {
 }
 
 const Container = styled.div`
-  margin: 2rem 0;
-  width: 60rem;
-  height: 15rem;
+  /* margin: 2rem 0; */
+  width: 70%;
+  height: 250px;
   border-radius: 5px;
   background: #f1e6cb;
   img {
@@ -62,16 +62,17 @@ const Container = styled.div`
    */
 `
 
-const PromotedItems = styled.ul`
-  border-radius: 2rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
-const Item = styled.li`
-  margin: 2rem 3rem;
-  list-style: none;
-`
+// const PromotedItems = styled.ul`
+//   border-radius: 2rem;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// `
+
+// const Item = styled.li`
+//   margin: 2rem 3rem;
+//   list-style: none;
+// `
 
 export default Promoted

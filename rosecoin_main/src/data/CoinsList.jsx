@@ -85,7 +85,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5rem 0;
+  margin: 3rem 0;
 `
 
 const Table = styled.table`
