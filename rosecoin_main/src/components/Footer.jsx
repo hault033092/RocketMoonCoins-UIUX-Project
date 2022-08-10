@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import logo from '../assets/logos/footer_logo.svg'
-import icons from '../assets/icons/icons'
+import SocialNetwork from './SocialNetwork'
 
 const Footer = () => {
   return (
@@ -15,18 +15,7 @@ const Footer = () => {
         <h3>ROSECOIN COMPANY LTD.</h3>
       </NavContainer>
       <ContactInfo>
-        <a href='http://facebook.com/rosecoinweb3' target='_blank'>
-          <img src={icons.facebook} alt='' />
-        </a>
-        <a href='http://bit.ly/3zjSEiM' target='_blank'>
-          <img src={icons.linkedin} alt='' />
-        </a>
-        <a href='https://t.me/+pUHV2j1VFpR' target='_blank'>
-          <img src={icons.telegram} alt='' />
-        </a>
-        <a href='https://twitter.com/RoseCoin96' target='_blank'>
-          <img src={icons.twitter} alt='' />
-        </a>
+        <SocialNetwork />
       </ContactInfo>
     </Container>
   )
@@ -52,9 +41,6 @@ const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 60%;
-
-  &.Link {
-  }
 `
 
 const ContactInfo = styled.div`

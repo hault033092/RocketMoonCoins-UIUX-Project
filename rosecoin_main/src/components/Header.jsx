@@ -46,7 +46,9 @@ const Header = () => {
           <UserLinks to='/login'>
             <Button content='log in' />
           </UserLinks>
-          <UserLinks to='/signup'>SIGN UP</UserLinks>
+          <UserLinks to='/signup' className='Signup_Link'>
+            <h4>SIGN UP</h4>
+          </UserLinks>
         </UserLinksContainer>
       </HeaderRight>
     </NavContainer>
@@ -181,6 +183,18 @@ const UserLinksContainer = styled.div`
   align-items: center;
   text-decoration: none;
   height: relative;
+  h2::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--golden);
+    transition: width 0.3s;
+  }
+
+  h2:hover::after {
+    width: 100%;
+  }
 `
 
 const UserLinks = styled(Link)`

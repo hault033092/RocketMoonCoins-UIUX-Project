@@ -15,7 +15,7 @@ const SocialNetwork = () => {
     'linear-gradient(to right, #3aab4b 0%, #12e238 40%, #F0A853 100%)'
   const TwitterBackground = 'linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)'
   const LinkedinBackground =
-    'linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)'
+    'linear-gradient(to right, #9fd8e9 0%, #2f7e99 100%)'
   return (
     <IconContainer>
       <Icon color={FacebookBackground}>

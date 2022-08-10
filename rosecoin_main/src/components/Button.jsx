@@ -14,7 +14,7 @@ const StyledButton = styled.button`
   );
   text-transform: uppercase;
   width: 150px;
-  height: 55px;
+  height: 50px;
   border: none;
   font-family: var(--font-main);
   font-size: large;

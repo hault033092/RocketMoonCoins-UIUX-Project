@@ -5,17 +5,17 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 const App = () => {
   return (
-    <>
+    <Container>
       <GlobalStyle />
       <Header />
       <Pages />
       <Footer />
-    </>
+    </Container>
   )
 }
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap'); */
 
   * {
     margin: 0;
@@ -37,10 +37,15 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--navyviolet);
+    width: 100%;
     height: 100%;
-    margin: 0;
-    color: #555;
   }
+`
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 export default App

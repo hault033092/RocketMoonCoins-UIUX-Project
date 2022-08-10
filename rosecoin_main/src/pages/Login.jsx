@@ -4,13 +4,9 @@ import Button from '../components/Button'
 import Icon from '../components/Icon'
 import Input from '../components/Input'
 import { FaFacebookSquare, FaTwitterSquare, FaTelegram } from 'react-icons/fa'
+import SocialNetwork from '../components/SocialNetwork'
 
 const Login = () => {
-  const FacebookBackground =
-    'linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)'
-  const TelegramBackground =
-    'linear-gradient(to right, #3aab4b 0%, #12e238 40%, #F0A853 100%)'
-  const TwitterBackground = 'linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)'
   return (
     <MainContainer>
       <WelcomeText>WELCOME</WelcomeText>
@@ -24,15 +20,7 @@ const Login = () => {
       <LoginWith>OR LOGIN WITH</LoginWith>
       <HorizontalRule />
       <IconsContainer>
-        <Icon color={FacebookBackground}>
-          <FaFacebookSquare />
-        </Icon>
-        <Icon color={TelegramBackground}>
-          <FaTelegram />
-        </Icon>
-        <Icon color={TwitterBackground}>
-          <FaTwitterSquare />
-        </Icon>
+        <SocialNetwork />
       </IconsContainer>
       <ForgotPassword>Forgot Password ?</ForgotPassword>
     </MainContainer>
@@ -41,10 +29,12 @@ const Login = () => {
 
 const MainContainer = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 5rem; */
   height: 80vh;
-  width: 30vw;
+  width: 50%;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8.5px);
@@ -53,7 +43,7 @@ const MainContainer = styled.div`
   color: var(--midnightdark);
   text-transform: uppercase;
   letter-spacing: 0.4rem;
-  @media only screen and (max-width: 320px) {
+  /* @media only screen and (max-width: 320px) {
     width: 80vw;
     height: 90vh;
     hr {
@@ -85,7 +75,7 @@ const MainContainer = styled.div`
   @media only screen and (min-width: 1280px) {
     width: 30vw;
     height: 80vh;
-  }
+  } */
 `
 
 const WelcomeText = styled.h2`
