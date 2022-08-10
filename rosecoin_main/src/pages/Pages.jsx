@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ContactUs from './ContactUs'
+import AboutUs from './AboutUs'
 import Home from './Home'
 import Login from './Login'
 import Promote from './Promote'
@@ -16,6 +17,7 @@ const Pages = () => {
       <Route path='/contactus' element={<ContactUs />} />
       <Route path='/login' element={<Login />}></Route>
       <Route path='/signup' element={<Signup />}></Route>
+      <Route path='/aboutus' element={<AboutUs />}></Route>
     </Routes>
   )
 }
