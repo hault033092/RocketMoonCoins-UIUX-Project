@@ -13,7 +13,8 @@ const StyledButton = styled.button`
     var(--darkgolden) 100%
   );
   text-transform: uppercase;
-  padding: 15px 25px;
+  width: 150px;
+  height: 55px;
   border: none;
   font-family: var(--font-main);
   font-size: large;

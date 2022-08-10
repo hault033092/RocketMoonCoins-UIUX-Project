@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logos/header_logo.svg'
 import styled from 'styled-components'
-import icons from '../assets/icons/icons'
 import { FaSearch } from 'react-icons/fa'
 import Button from './Button'
+import SocialNetwork from './SocialNetwork'
 
 const Header = () => {
   return (
@@ -23,6 +23,8 @@ const Header = () => {
             <NavLinks to='/promote'>PROMOTE</NavLinks>
 
             <NavLinks to='/contactus'>CONTACT US</NavLinks>
+
+            <NavLinks to='/aboutus'>ABOUT US</NavLinks>
           </NavLinkContainer>
 
           <FormStyle>
@@ -33,39 +35,10 @@ const Header = () => {
       </HeaderLeft>
 
       <HeaderRight>
-        <ContactInfo>
+        <SocialNetworkContainer>
           <h2>JOIN US AT</h2>
-          <div>
-            <a
-              href='http://facebook.com/rosecoinweb3'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              <img src={icons.facebook} alt='' />
-            </a>
-            <a
-              href='http://bit.ly/3zjSEiM'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              <img src={icons.linkedin} alt='' />
-            </a>
-            <a
-              href='https://t.me/+pUHV2j1VFpR'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              <img src={icons.telegram} alt='' />
-            </a>
-            <a
-              href='https://twitter.com/RoseCoin96'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              <img src={icons.twitter} alt='' />
-            </a>
-          </div>
-        </ContactInfo>
+          <SocialNetwork />
+        </SocialNetworkContainer>
 
         <VerticalLine />
 
@@ -84,7 +57,7 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 3rem;
+  padding: 0rem 2rem;
   width: 100%;
   height: 150px;
   box-shadow: 3px 3px 8px var(--navyviolet);
@@ -93,21 +66,18 @@ const NavContainer = styled.nav`
 
 const HeaderLeft = styled.div`
   display: flex;
-  /* justify-content: space-a; */
   align-items: center;
-  width: 90rem;
+  width: 90%;
   height: 80%;
-  margin-left: 5rem;
+  /* margin-left: rem; */
 `
 
 const HeaderRight = styled.div`
   display: flex;
   justify-content: flex-end;
-  /* align-items: center; */
-  /* height: 15vh; */
   width: 50rem;
   height: 80%;
-  margin-right: 5rem;
+  /* margin-right: 5rem; */
 `
 
 const InnerLeft = styled.div`
@@ -156,7 +126,7 @@ const NavLinks = styled(Link)`
   }
 `
 
-const ContactInfo = styled.div`
+const SocialNetworkContainer = styled.div`
   display: flex;
   width: 15rem;
   height: relative;
@@ -164,9 +134,9 @@ const ContactInfo = styled.div`
   justify-content: space-around;
   align-items: center;
 
-  svg {
-    width: 3rem;
-    height: 3rem;
+  h2 {
+    color: var(--golden);
+    font-family: var(--font-main);
   }
 `
 
