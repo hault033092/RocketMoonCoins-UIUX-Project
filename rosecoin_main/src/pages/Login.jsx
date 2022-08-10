@@ -18,13 +18,13 @@ const Login = () => {
     "linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)";
   return (
     <MainContainer>
-      <WelcomeText>Welcome</WelcomeText>
+      <WelcomeText>WELCOME</WelcomeText>
       <InputContainer>
         <Input type="text" placeholder="Email" />
         <Input type="password" placeholder="Password" />
       </InputContainer>
       <ButtonContainer>
-        <Button content="Sign Up" />
+        <Button content="LOG IN" />
       </ButtonContainer>
       <LoginWith>OR LOGIN WITH</LoginWith>
       <HorizontalRule />
@@ -55,7 +55,7 @@ const MainContainer = styled.div`
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
   border-radius: 10px;
-  color: #ffffff;
+  color: var(--midnightdark);
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   @media only screen and (max-width: 320px) {
@@ -95,6 +95,8 @@ const MainContainer = styled.div`
 
 const WelcomeText = styled.h2`
   margin: 3rem 0 2rem 0;
+  color: var(--midnightdark);
+  align-items:center;
 `
 
 const InputContainer = styled.div`

@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  background: linear-gradient(to right, --golden 0%, --darkgolden 79%);
 }
 
 :root {

@@ -78,7 +78,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, var(--golden), var(--golden));
+    background: linear-gradient(to bottom, var(--lightgolden) 10%, var(--darkgolden) 50%);
     height: 100%;
     margin: 0;
     color: #555;
@@ -104,7 +104,7 @@ const StyledFormWrapper = styled.div`
 `
 
 const StyledForm = styled.form`
-  width: 50%;
+  width: 100%;
   max-width:100%;
   padding: 2rem;
   background-color: #fff;
