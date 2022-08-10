@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styled, { createGlobalStyle, css } from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const ContactUs = () => {
   const [state, setState] = useState(initalState)
@@ -29,7 +29,6 @@ const ContactUs = () => {
   }
   return (
     <>
-      <GlobalStyle />
       <StyledFormWrapper>
         <StyledForm onSubmit={handleSubmit}>
           <h2>Contact Form</h2>
@@ -72,19 +71,6 @@ const ContactUs = () => {
   )
 }
 
-const GlobalStyle = createGlobalStyle`
-  html {
-    height: 100%
-  }
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, var(--lightgolden) 10%, var(--darkgolden) 50%);
-    height: 100%;
-    margin: 0;
-    color: #555;
-  }
-`
-
 const sharedStyles = css`
   background-color: #eee;
   height: 40px;
@@ -105,7 +91,7 @@ const StyledFormWrapper = styled.div`
 
 const StyledForm = styled.form`
   width: 100%;
-  max-width:100%;
+  max-width: 100%;
   padding: 2rem;
   background-color: #fff;
   border-radius: 1rem;

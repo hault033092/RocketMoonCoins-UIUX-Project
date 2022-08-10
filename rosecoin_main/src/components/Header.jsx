@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/logos/rosecoin_header_logo.svg'
+import logo from '../assets/logos/header_logo.svg'
 import styled from 'styled-components'
 import icons from '../assets/icons/icons'
 import { FaSearch } from 'react-icons/fa'
+import Button from './Button'
 
 const Header = () => {
   return (
@@ -69,9 +70,9 @@ const Header = () => {
         <VerticalLine />
 
         <UserLinksContainer>
-          <Button>
-            <UserLinks to='/login'>LOG IN</UserLinks>
-          </Button>
+          <UserLinks to='/login'>
+            <Button content='log in' />
+          </UserLinks>
           <UserLinks to='/signup'>SIGN UP</UserLinks>
         </UserLinksContainer>
       </HeaderRight>
@@ -86,8 +87,8 @@ const NavContainer = styled.nav`
   padding: 0rem 3rem;
   width: 100%;
   height: 150px;
-  box-shadow: 3px 3px 8px var(--darkgolden);
-  background: var(--navyviolet);
+  box-shadow: 3px 3px 8px var(--navyviolet);
+  background: var(--midnightdark);
 `
 
 const HeaderLeft = styled.div`
@@ -217,17 +218,6 @@ const UserLinks = styled(Link)`
   color: var(--golden);
   font-family: var(--font-main);
   font-size: larger;
-`
-
-const Button = styled.button`
-  padding: 15px 25px;
-  background: var(--lightgolden);
-  border: 3px solid var(--darkgolden);
-  border-radius: 25px;
-
-  a {
-    color: var(--navyviolet);
-  }
 `
 
 export default Header

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import logo from '../assets/logos/rosecoin_footer_logo.svg'
+import logo from '../assets/logos/footer_logo.svg'
 import icons from '../assets/icons/icons'
 
 const Footer = () => {

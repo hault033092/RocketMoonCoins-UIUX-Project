@@ -1,30 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from '../components/Button';
-import Icon from '../components/Icon';
-import Input from '../components/Input';
-import {
-  FaFacebookSquare,
-  FaTwitterSquare,
-  FaTelegram,
-} from 'react-icons/fa'
+import Button from '../components/Button'
+import Icon from '../components/Icon'
+import Input from '../components/Input'
+import { FaFacebookSquare, FaTwitterSquare, FaTelegram } from 'react-icons/fa'
 
 const Login = () => {
   const FacebookBackground =
-    "linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)";
+    'linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)'
   const TelegramBackground =
-    "linear-gradient(to right, #3aab4b 0%, #12e238 40%, #F0A853 100%)";
-  const TwitterBackground =
-    "linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)";
+    'linear-gradient(to right, #3aab4b 0%, #12e238 40%, #F0A853 100%)'
+  const TwitterBackground = 'linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)'
   return (
     <MainContainer>
       <WelcomeText>WELCOME</WelcomeText>
       <InputContainer>
-        <Input type="text" placeholder="Email" />
-        <Input type="password" placeholder="Password" />
+        <Input type='text' placeholder='Email' />
+        <Input type='password' placeholder='Password' />
       </InputContainer>
       <ButtonContainer>
-        <Button content="LOG IN" />
+        <Button content='LOG IN' />
       </ButtonContainer>
       <LoginWith>OR LOGIN WITH</LoginWith>
       <HorizontalRule />
@@ -96,7 +91,7 @@ const MainContainer = styled.div`
 const WelcomeText = styled.h2`
   margin: 3rem 0 2rem 0;
   color: var(--midnightdark);
-  align-items:center;
+  align-items: center;
 `
 
 const InputContainer = styled.div`
