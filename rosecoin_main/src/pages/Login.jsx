@@ -8,33 +8,36 @@ import SocialNetwork from '../components/SocialNetwork'
 
 const Login = () => {
   return (
-    <MainContainer>
-      <WelcomeText>WELCOME</WelcomeText>
-      <InputContainer>
-        <Input type='text' placeholder='Email' />
-        <Input type='password' placeholder='Password' />
-      </InputContainer>
-      <ButtonContainer>
-        <Button content='LOG IN' />
-      </ButtonContainer>
-      <LoginWith>OR LOGIN WITH</LoginWith>
-      <HorizontalRule />
-      <IconsContainer>
-        <SocialNetwork />
-      </IconsContainer>
-      <ForgotPassword>Forgot Password ?</ForgotPassword>
-    </MainContainer>
+    <div>
+      <MainContainer>
+        <WelcomeText>WELCOME</WelcomeText>
+        <InputContainer>
+          <Input type='text' placeholder='Email' />
+          <Input type='password' placeholder='Password' />
+        </InputContainer>
+        <ButtonContainer>
+          <Button content='LOG IN' />
+        </ButtonContainer>
+        <LoginWith>OR LOGIN WITH</LoginWith>
+        <HorizontalRule />
+        <IconsContainer>
+          <SocialNetwork />
+        </IconsContainer>
+        <ForgotPassword>Forgot Password ?</ForgotPassword>
+      </MainContainer>
+    </div>
   )
 }
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  /* margin: 5rem; */
+  margin: 10rem 20rem;
+  /* padding: 5rem 0rem; */
   height: 80vh;
-  width: 50%;
+  /* width: 100%; */
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8.5px);
@@ -89,7 +92,7 @@ const InputContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 20%;
+  height: 100%;
   width: 100%;
 `
 

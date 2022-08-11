@@ -18,27 +18,51 @@ const SocialNetwork = () => {
     'linear-gradient(to right, #9fd8e9 0%, #2f7e99 100%)'
   return (
     <IconContainer>
-      <Icon color={FacebookBackground}>
-        <FaFacebookSquare />
-      </Icon>
-      <Icon color={TelegramBackground}>
-        <FaTelegram />
-      </Icon>
-      <Icon color={TwitterBackground}>
-        <FaTwitterSquare />
-      </Icon>
-      <Icon color={LinkedinBackground}>
-        <FaLinkedin />
-      </Icon>
+      <a
+        href='http://facebook.com/rosecoinweb3'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <Icon color={FacebookBackground}>
+          <FaFacebookSquare />
+        </Icon>
+      </a>
+      <a
+        href='https://t.me/+pUHV2j1VFpR'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <Icon color={TelegramBackground}>
+          <FaTelegram />
+        </Icon>
+      </a>
+      <a
+        href='https://t.me/+pUHV2j1VFpR'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <Icon color={TwitterBackground}>
+          <FaTwitterSquare />
+        </Icon>
+      </a>
+      <a href='http://bit.ly/3zjSEiM' target='_blank' rel='noopener noreferrer'>
+        <Icon color={LinkedinBackground}>
+          <FaLinkedin />
+        </Icon>
+      </a>
     </IconContainer>
   )
 }
 
 const IconContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 6rem;
+  padding: 0rem 1rem;
+  border: 5px solid var(--golden);
+  border-radius: 30px;
 `
 
 export default SocialNetwork

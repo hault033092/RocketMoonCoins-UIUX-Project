@@ -36,7 +36,7 @@ const Header = () => {
 
       <HeaderRight>
         <SocialNetworkContainer>
-          <h2>JOIN US AT</h2>
+          <h2>CONNECT US</h2>
           <SocialNetwork />
         </SocialNetworkContainer>
 
@@ -59,16 +59,18 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 2rem;
+  padding: 0rem 3rem;
   width: 100%;
   height: 150px;
   box-shadow: 3px 3px 8px var(--navyviolet);
   background: var(--midnightdark);
+  border: 1px solid var(--golden);
 `
 
 const HeaderLeft = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-around;
   width: 90%;
   height: 80%;
   /* margin-left: rem; */
@@ -76,8 +78,9 @@ const HeaderLeft = styled.div`
 
 const HeaderRight = styled.div`
   display: flex;
-  justify-content: flex-end;
-  width: 50rem;
+  justify-content: space-around;
+
+  width: 60%;
   height: 80%;
   /* margin-right: 5rem; */
 `
@@ -87,7 +90,7 @@ const InnerLeft = styled.div`
   flex-direction: column;
   justify-content: space-around;
   height: 100px;
-  margin: 0rem 2rem;
+  /* margin: 0rem 2rem; */
 `
 
 const NavLogo = styled(Link)`
@@ -167,12 +170,8 @@ const FormStyle = styled.form`
 `
 
 const VerticalLine = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1px;
+  width: 1.5px;
   height: relative;
-  margin: 0 2rem;
   background-color: var(--golden);
 `
 

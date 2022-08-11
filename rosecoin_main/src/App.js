@@ -5,12 +5,14 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 const App = () => {
   return (
-    <Container>
+    <>
       <GlobalStyle />
       <Header />
-      <Pages />
+      <Container>
+        <Pages />
+      </Container>
       <Footer />
-    </Container>
+    </>
   )
 }
 
@@ -46,6 +48,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 3rem;
 `
 
 export default App

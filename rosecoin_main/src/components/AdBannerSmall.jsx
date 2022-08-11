@@ -22,9 +22,8 @@ const AdBannerSmall = () => {
 const Container = styled.div`
   display: flex;
   justify-content: space-around;
-  /* margin: 3rem 0rem; */
-  width: 70%;
-  height: 150px;
+  margin: 1rem 0rem;
+  height: relative;
 
   img {
     width: 320px;

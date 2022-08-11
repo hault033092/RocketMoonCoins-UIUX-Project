@@ -8,12 +8,21 @@ const Footer = () => {
   return (
     <Container>
       <img className='footer-logo' src={logo} alt='footer logo' />
-      <NavContainer>
-        <Link to='/submitcoin'>SUBMIT COIN</Link>
-        <Link to='/promote'>PROMOTE</Link>
-        <Link to='/contactus'>CONTACT US</Link>
+
+      <FooterMid>
+        <NavLinkContainer>
+          <NavLinks to='/'>HOME</NavLinks>
+
+          <NavLinks to='/submitcoin'>SUBMIT COIN</NavLinks>
+
+          <NavLinks to='/promote'>PROMOTE</NavLinks>
+
+          <NavLinks to='/contactus'>CONTACT US</NavLinks>
+
+          <NavLinks to='/aboutus'>ABOUT US</NavLinks>
+        </NavLinkContainer>
         <h3>ROSECOIN COMPANY LTD.</h3>
-      </NavContainer>
+      </FooterMid>
       <ContactInfo>
         <SocialNetwork />
       </ContactInfo>
@@ -25,8 +34,9 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 0rem 3rem;
   width: 100%;
-  height: 25vh;
+  height: 200px;
   background: var(--midnightdark);
 
   .footer-logo {
@@ -35,12 +45,42 @@ const Container = styled.div`
   }
 `
 
-const NavContainer = styled.div`
+const FooterMid = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 60%;
+  width: 100%;
+  height: 60%;
+`
+
+const NavLinkContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: relative;
+`
+
+const NavLinks = styled(Link)`
+  margin: 0 0.75rem;
+  text-decoration: none;
+  color: var(--golden);
+  display: inline-block;
+  font-family: var(--font-main);
+  font-size: medium;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--golden);
+    transition: width 0.3s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 `
 
 const ContactInfo = styled.div`

@@ -56,23 +56,6 @@ const Container = styled.div`
     width: 150px;
     height: 150px;
   }
-  /* display: flex;
-  justify-content: center;
-  border: 1px solid;
-   */
 `
-
-// const PromotedItems = styled.ul`
-//   border-radius: 2rem;
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// `
-
-// const Item = styled.li`
-//   margin: 2rem 3rem;
-//   list-style: none;
-// `
 
 export default Promoted
