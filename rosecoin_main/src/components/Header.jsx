@@ -71,18 +71,15 @@ const HeaderLeft = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 90%;
+  width: 50rem;
   height: 80%;
-  /* margin-left: rem; */
 `
 
 const HeaderRight = styled.div`
   display: flex;
   justify-content: space-around;
-
-  width: 60%;
+  width: 40%;
   height: 80%;
-  /* margin-right: 5rem; */
 `
 
 const InnerLeft = styled.div`
@@ -90,7 +87,6 @@ const InnerLeft = styled.div`
   flex-direction: column;
   justify-content: space-around;
   height: 100px;
-  /* margin: 0rem 2rem; */
 `
 
 const NavLogo = styled(Link)`

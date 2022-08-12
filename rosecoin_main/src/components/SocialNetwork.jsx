@@ -63,6 +63,16 @@ const IconContainer = styled.div`
   padding: 0rem 1rem;
   border: 5px solid var(--golden);
   border-radius: 30px;
+
+  a::after {
+    margin-bottom: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a:hover:after {
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+  }
 `
 
 export default SocialNetwork

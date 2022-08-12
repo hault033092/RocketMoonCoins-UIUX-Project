@@ -23,6 +23,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   margin: 1rem 0rem;
+  width: 1200px;
   height: relative;
 
   img {

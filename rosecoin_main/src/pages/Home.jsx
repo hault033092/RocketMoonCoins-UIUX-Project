@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Promoted from '../components/Promoted'
 import AdBannerSmall from '../components/AdBannerSmall'
 import AdBannerLarge from '../components/AdBannerLarge'
-import CryptoList from '../components/CryptoList'
 import CoinsList from '../data/CoinsList'
 
 const Home = () => {

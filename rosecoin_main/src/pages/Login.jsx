@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Button from '../components/Button'
-import Icon from '../components/Icon'
 import Input from '../components/Input'
-import { FaFacebookSquare, FaTwitterSquare, FaTelegram } from 'react-icons/fa'
 import SocialNetwork from '../components/SocialNetwork'
 
 const Login = () => {
@@ -35,9 +33,7 @@ const MainContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   margin: 10rem 20rem;
-  /* padding: 5rem 0rem; */
   height: 80vh;
-  /* width: 100%; */
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8.5px);
