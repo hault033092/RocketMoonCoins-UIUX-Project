@@ -62,7 +62,7 @@ const NavContainer = styled.nav`
   padding: 0rem 3rem;
   width: 100%;
   height: 150px;
-  box-shadow: 3px 3px 8px var(--navyviolet);
+  box-shadow: 1.5px 1.5px 5px var(--golden);
   background: var(--midnightdark);
   border: 1px solid var(--golden);
 `
@@ -178,7 +178,7 @@ const UserLinksContainer = styled.div`
   align-items: center;
   text-decoration: none;
   height: relative;
-  h2::after {
+  h4::after {
     content: '';
     display: block;
     width: 0;
@@ -187,7 +187,7 @@ const UserLinksContainer = styled.div`
     transition: width 0.3s;
   }
 
-  h2:hover::after {
+  h4:hover::after {
     width: 100%;
   }
 `

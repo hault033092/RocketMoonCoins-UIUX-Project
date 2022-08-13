@@ -52,7 +52,7 @@ const CoinsList = () => {
           {currentTableData.map((coin) => {
             return (
               <>
-                <tr id={coin.id}>
+                <tr key={coin.id}>
                   <td className='rank'>{coin.rank}</td>
                   <td>
                     <a href={coin.websiteUrl} className='logo'>

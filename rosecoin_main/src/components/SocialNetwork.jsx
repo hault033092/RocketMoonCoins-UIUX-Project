@@ -61,7 +61,7 @@ const IconContainer = styled.div`
   width: 100%;
   height: 6rem;
   padding: 0rem 1rem;
-  border: 5px solid var(--golden);
+  border: 3px solid var(--golden);
   border-radius: 30px;
 
   a {
@@ -73,20 +73,6 @@ const IconContainer = styled.div`
     margin-bottom: 10px;
     transition: all 0.2s ease-in-out;
   }
-
-  /* a:after::hover {
-    margin-bottom: 10px;
-    transition: all 0.2s ease-in-out;
-  } */
-
-  /* a::after {
-    margin-bottom: 0;
-    transition: margin-bottom 0.2s ease;
-  }
-
-  a:hover::after {
-    margin-bottom: 10px;
-  } */
 `
 
 export default SocialNetwork

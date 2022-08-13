@@ -3,11 +3,16 @@ import styled from 'styled-components'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
 import images from '../assets/images/images.jsx'
+import { Link } from 'react-router-dom'
 
 const Promoted = () => {
   return (
     <Container>
-      <h2>PROMOTED</h2>
+      <HeadingContainer>
+        <h2>PROMOTED</h2>
+        <Link to='/contactus'>Your coin's not here? Contact us!</Link>
+      </HeadingContainer>
+
       {/* <Splide
         options={{
           perPage: 4,
@@ -47,14 +52,58 @@ const Promoted = () => {
 }
 
 const Container = styled.div`
-  /* margin: 2rem 0; */
-  width: 1200px;
-  height: 250px;
-  border-radius: 5px;
+  width: 70%;
+  height: 50vh;
+  /* border-radius: 5px; */
   background: #f1e6cb;
   img {
     width: 150px;
     height: 150px;
+  }
+`
+
+const HeadingContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 5vh;
+  border: 1px solid var(--midnightdark);
+`
+
+const Table = styled.table`
+  width: 1000px;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
+`
+
+const Thead = styled.thead`
+  background-color: rgb(44, 44, 44);
+  text-align: center;
+
+  td {
+    color: #ebd192;
+  }
+`
+const Tbody = styled.tbody`
+  tr {
+    text-align: right;
+  }
+
+  a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &.rank {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &.symbol {
+    text-align: center;
   }
 `
 
