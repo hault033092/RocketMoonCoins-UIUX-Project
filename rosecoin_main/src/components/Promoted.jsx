@@ -8,7 +8,7 @@ const Promoted = () => {
   return (
     <Container>
       <h2>PROMOTED</h2>
-      <Splide
+      {/* <Splide
         options={{
           perPage: 4,
           arrows: true,
@@ -41,14 +41,14 @@ const Promoted = () => {
         <SplideSlide>
           <img src={images.xrp} alt='xrp logo' />
         </SplideSlide>
-      </Splide>
+      </Splide> */}
     </Container>
   )
 }
 
 const Container = styled.div`
   /* margin: 2rem 0; */
-  width: 70%;
+  width: 1200px;
   height: 250px;
   border-radius: 5px;
   background: #f1e6cb;
@@ -56,23 +56,6 @@ const Container = styled.div`
     width: 150px;
     height: 150px;
   }
-  /* display: flex;
-  justify-content: center;
-  border: 1px solid;
-   */
 `
-
-// const PromotedItems = styled.ul`
-//   border-radius: 2rem;
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// `
-
-// const Item = styled.li`
-//   margin: 2rem 3rem;
-//   list-style: none;
-// `
 
 export default Promoted

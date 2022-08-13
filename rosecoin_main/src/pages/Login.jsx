@@ -1,50 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
 import Button from '../components/Button'
-import Icon from '../components/Icon'
 import Input from '../components/Input'
-import { FaFacebookSquare, FaTwitterSquare, FaTelegram } from 'react-icons/fa'
+import SocialNetwork from '../components/SocialNetwork'
 
 const Login = () => {
-  const FacebookBackground =
-    'linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)'
-  const TelegramBackground =
-    'linear-gradient(to right, #3aab4b 0%, #12e238 40%, #F0A853 100%)'
-  const TwitterBackground = 'linear-gradient(to right, #56C1E1 0%, #35A9CE 50%)'
   return (
-    <MainContainer>
-      <WelcomeText>WELCOME</WelcomeText>
-      <InputContainer>
-        <Input type='text' placeholder='Email' />
-        <Input type='password' placeholder='Password' />
-      </InputContainer>
-      <ButtonContainer>
-        <Button content='LOG IN' />
-      </ButtonContainer>
-      <LoginWith>OR LOGIN WITH</LoginWith>
-      <HorizontalRule />
-      <IconsContainer>
-        <Icon color={FacebookBackground}>
-          <FaFacebookSquare />
-        </Icon>
-        <Icon color={TelegramBackground}>
-          <FaTelegram />
-        </Icon>
-        <Icon color={TwitterBackground}>
-          <FaTwitterSquare />
-        </Icon>
-      </IconsContainer>
-      <ForgotPassword>Forgot Password ?</ForgotPassword>
-    </MainContainer>
+    <div>
+      <MainContainer>
+        <WelcomeText>WELCOME</WelcomeText>
+        <InputContainer>
+          <Input type='text' placeholder='Email' />
+          <Input type='password' placeholder='Password' />
+        </InputContainer>
+        <ButtonContainer>
+          <Button content='LOG IN' />
+        </ButtonContainer>
+        <LoginWith>OR LOGIN WITH</LoginWith>
+        <HorizontalRule />
+        <IconsContainer>
+          <SocialNetwork />
+        </IconsContainer>
+        <ForgotPassword>Forgot Password ?</ForgotPassword>
+      </MainContainer>
+    </div>
   )
 }
 
 const MainContainer = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10rem 20rem;
   height: 80vh;
-  width: 30vw;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8.5px);
@@ -53,7 +42,7 @@ const MainContainer = styled.div`
   color: var(--midnightdark);
   text-transform: uppercase;
   letter-spacing: 0.4rem;
-  @media only screen and (max-width: 320px) {
+  /* @media only screen and (max-width: 320px) {
     width: 80vw;
     height: 90vh;
     hr {
@@ -85,7 +74,7 @@ const MainContainer = styled.div`
   @media only screen and (min-width: 1280px) {
     width: 30vw;
     height: 80vh;
-  }
+  } */
 `
 
 const WelcomeText = styled.h2`
@@ -99,7 +88,7 @@ const InputContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 20%;
+  height: 100%;
   width: 100%;
 `
 

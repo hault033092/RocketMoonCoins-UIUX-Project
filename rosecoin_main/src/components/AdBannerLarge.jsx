@@ -49,7 +49,7 @@ const AdBannerLarge = () => {
 }
 const Container = styled.div`
   width: 1000px;
-  margin: 3rem;
+  margin: 2rem 0;
 `
 
 export default AdBannerLarge

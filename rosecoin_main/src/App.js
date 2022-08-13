@@ -8,14 +8,16 @@ const App = () => {
     <>
       <GlobalStyle />
       <Header />
-      <Pages />
+      <Container>
+        <Pages />
+      </Container>
       <Footer />
     </>
   )
 }
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap'); */
 
   * {
     margin: 0;
@@ -47,10 +49,16 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--navyviolet);
+    width: 100%;
     height: 100%;
-    margin: 0;
-    color: #555;
   }
+`
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
 `
 
 export default App
