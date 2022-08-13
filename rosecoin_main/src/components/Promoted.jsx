@@ -8,7 +8,7 @@ const Promoted = () => {
   return (
     <Container>
       <h2>PROMOTED</h2>
-      <Splide
+      {/* <Splide
         options={{
           perPage: 4,
           arrows: true,
@@ -41,7 +41,7 @@ const Promoted = () => {
         <SplideSlide>
           <img src={images.xrp} alt='xrp logo' />
         </SplideSlide>
-      </Splide>
+      </Splide> */}
     </Container>
   )
 }

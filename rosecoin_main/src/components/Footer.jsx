@@ -11,7 +11,7 @@ const Footer = () => {
 
       <FooterMid>
         <NavLinkContainer>
-          <NavLinks to='/'>HOME</NavLinks>
+          {/* <NavLinks to='/'>HOME</NavLinks> */}
 
           <NavLinks to='/submitcoin'>SUBMIT COIN</NavLinks>
 
@@ -32,7 +32,7 @@ const Footer = () => {
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0rem 3rem;
   width: 100%;
@@ -48,10 +48,11 @@ const Container = styled.div`
 const FooterMid = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 60%;
+  width: 50%;
+  height: 35%;
+  margin-left: 100px;
 `
 
 const NavLinkContainer = styled.div`
@@ -84,10 +85,7 @@ const NavLinks = styled(Link)`
 `
 
 const ContactInfo = styled.div`
-  display: flex;
-  width: 15rem;
-  height: relative;
-  justify-content: space-around;
+  width: 280px;
 `
 
 export default Footer

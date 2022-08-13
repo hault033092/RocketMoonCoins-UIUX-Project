@@ -78,7 +78,7 @@ const HeaderLeft = styled.div`
 const HeaderRight = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 40%;
+  width: 35%;
   height: 80%;
 `
 
