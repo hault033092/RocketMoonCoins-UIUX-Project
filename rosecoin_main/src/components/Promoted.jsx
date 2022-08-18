@@ -53,13 +53,9 @@ const Promoted = () => {
 
 const Container = styled.div`
   width: 70%;
-  height: 50vh;
+  height: 30vh;
   /* border-radius: 5px; */
   background: #f1e6cb;
-  img {
-    width: 150px;
-    height: 150px;
-  }
 `
 
 const HeadingContainer = styled.div`

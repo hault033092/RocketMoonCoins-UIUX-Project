@@ -32,12 +32,12 @@ const MainContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 10rem 20rem;
+  margin: 5rem 20rem;
   height: 80vh;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8.5px);
-  -webkit-backdrop-filter: blur(8.5px);
+  /* -webkit-backdrop-filter: blur(8.5px); */
   border-radius: 10px;
   color: var(--midnightdark);
   text-transform: uppercase;

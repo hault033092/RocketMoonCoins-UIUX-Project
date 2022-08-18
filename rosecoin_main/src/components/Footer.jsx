@@ -52,7 +52,7 @@ const FooterMid = styled.div`
   align-items: center;
   width: 50%;
   height: 35%;
-  margin-left: 100px;
+  margin-left: 0px;
 `
 
 const NavLinkContainer = styled.div`

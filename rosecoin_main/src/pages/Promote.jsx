@@ -4,17 +4,17 @@ import styled from 'styled-components'
 const Promote = () => {
   const [promotes, setPromotes] = useState([])
 
-  console.log(promotes)
   useEffect(() => {
     getPromotePackage()
   }, [])
+
   const getPromotePackage = async () => {
     const check = localStorage.getItem('promote')
     if (check) {
       setPromotes(JSON.parse(check))
     } else {
       const connectApi = await fetch(
-        `/api/services/app/MoonCoinView/GetPromoDefault`
+        `/api/services/app/MoonCoinView/GetPromoPack`
       )
       const data = await connectApi.json()
       localStorage.setItem('promote', JSON.stringify(data))
@@ -24,7 +24,10 @@ const Promote = () => {
 
   return (
     <Container>
-      <div>{promotes.content}</div>
+      {/* <ul key={promotes.id}>
+        <li></li>
+        <li></li>
+      </ul> */}
     </Container>
   )
 }

@@ -84,7 +84,7 @@ const CoinsList = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
   margin: 2rem 0;
 `
 
