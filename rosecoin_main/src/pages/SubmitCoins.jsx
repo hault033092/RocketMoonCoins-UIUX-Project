@@ -3,21 +3,27 @@ import styled from 'styled-components'
 import Input from '../components/Input'
 import Button from '../components/Button'
 import { RadioInput } from '../components/RadioInput'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import DateSelect from '../components/DateSelect'
+import axios from 'axios'
 
 const SubmitCoins = () => {
-  const [answer, setAnswer] = useState('Yes')
+  const [answer, setAnswer] = useState(null)
+  const [coinImage, setCoinImage] = useState('')
 
   const radioChangeHandler = (e) => {
     setAnswer(e.target.value)
   }
 
+  useEffect(() => {
+    axios.post(`/api/services/app/MoonCoinView/CreateCoinToSystem`, {})
+  })
+
   return (
     <Wrapper>
       <h1>Submit your Coins to Rosecoin</h1>
       <form action=''>
-        <h2>Upload coin logo*</h2>
+        <h2>Upload coin image*</h2>
         <input type='file' accept='image/*' placeholder='Upload coin image' />
         <h2>Coin Name*</h2>
         <Input type='text' placeholder='' />
