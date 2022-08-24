@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
   --darkgolden: #c08c13;
   --lightgolden: #f1e6cb;
   --midnightdark: #1a1a1a;
-  --navyviolet: #090e38;
+  --navyviolet: #262838;
   --theme-grey: #2b3046;
   --theme-grey-light: #2b3046ab;
   --theme-orange: #b02500;

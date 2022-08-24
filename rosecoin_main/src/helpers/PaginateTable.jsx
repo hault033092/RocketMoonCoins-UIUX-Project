@@ -12,16 +12,16 @@ export const PaginateTable = (props) => {
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`)
+    // console.log(`Loading items from ${itemOffset} to ${endOffset}`)
     setCurrentItems(data.slice(itemOffset, endOffset))
     setPageCount(Math.ceil(data.length / itemsPerPage))
   }, [itemOffset, itemsPerPage, data])
 
   const handlePageClick = (e) => {
     const newOffset = (e.selected * itemsPerPage) % data.length
-    console.log(
-      `User requested page number ${e.selected}, which is offset ${newOffset}`
-    )
+    // console.log(
+    //   `User requested page number ${e.selected}, which is offset ${newOffset}`
+    // )
     setItemOffset(newOffset)
   }
   return (
@@ -99,9 +99,9 @@ const MyPaginate = styled(ReactPaginate).attrs({
     border-color: transparent;
   }
   li.active a {
-    background-color: #0366d6;
+    background-color: var(--golden);
     border-color: transparent;
-    color: white;
+    color: var(--navyviolet);
     min-width: 32px;
   }
   li.disabled a {
@@ -118,6 +118,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 2rem 0;
+  border: 1px solid var(--golden);
+  border-radius: 5px;
 `
 
 const Table = styled.table`
