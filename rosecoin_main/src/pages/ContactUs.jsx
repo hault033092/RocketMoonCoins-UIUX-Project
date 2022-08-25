@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
+import emailjs from 'emailjs-com'
 
 const ContactUs = () => {
   const [state, setState] = useState(initalState)
@@ -27,10 +28,23 @@ const ContactUs = () => {
 
     setState((prev) => ({ ...prev, [inputName]: value }))
   }
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs.sendForm('service_b8l4lff', 'template_8vgw0ab', e.target, 'xA06NoX_nYna9TCy9')
+    .then((result) => {
+        console.log('SUCCESS!', result.status, result.text)
+    }, (error) => {
+        console.log(error.text)
+    })
+    e.target.reset()
+  }
+
   return (
     <>
       <StyledFormWrapper>
-        <StyledForm onSubmit={handleSubmit}>
+        <StyledForm onSubmit={sendEmail}>
           <h2>Contact Form</h2>
           <label htmlFor='name'>Name</label>
           <StyledInput
