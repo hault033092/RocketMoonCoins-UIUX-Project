@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 // import { motion } from 'framer-motion'
 
-const Button = ({ content }) => {
+const Button = ({ content, width, height }) => {
   return <StyledButton>{content}</StyledButton>
 }
 

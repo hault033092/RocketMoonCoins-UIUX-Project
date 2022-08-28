@@ -8,9 +8,9 @@ const App = () => {
     <>
       <GlobalStyle />
       <Header />
-      <Container>
+      <PageContainer>
         <Pages />
-      </Container>
+      </PageContainer>
       <Footer />
     </>
   )
@@ -54,10 +54,12 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Container = styled.div`
+const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0rem;
 `
 
 export default App

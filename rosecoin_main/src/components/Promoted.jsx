@@ -52,7 +52,7 @@ const Promoted = () => {
 }
 
 const Container = styled.div`
-  width: 70%;
+  width: 80rem;
   height: 30vh;
   /* border-radius: 5px; */
   background: #f1e6cb;
@@ -68,7 +68,7 @@ const HeadingContainer = styled.div`
 `
 
 const Table = styled.table`
-  width: 1000px;
+  width: 80rem;
   border-collapse: separate;
   border-spacing: 0 1rem;
 `

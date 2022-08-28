@@ -4,23 +4,39 @@ import Promoted from '../components/Promoted'
 import AdBannerSmall from '../components/AdBannerSmall'
 import AdBannerLarge from '../components/AdBannerLarge'
 import CoinsList from '../data/CoinsList'
+import AirDropList from '../data/AirDropList'
+import NftList from '../data/NftList'
 
 const Home = () => {
   return (
-    <HomeContainer>
-      <AdBannerSmall />
+    <>
       <Promoted />
+      <AdBannerSmall />
+      <TableContainer>
+        <CoinsList />
+        <AirDropList />
+      </TableContainer>
       <AdBannerLarge />
-      <CoinsList />
-    </HomeContainer>
+      <NftList />
+    </>
   )
 }
 
-const HomeContainer = styled.div`
+// const HomeContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   align-items: center;
+// `
+
+const TableContainer = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  border: 1px solid var(--golden);
+  border-radius: 10px;
+  width: 110rem;
+  height: 100vh;
 `
 
 export default Home

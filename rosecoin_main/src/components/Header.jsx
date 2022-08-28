@@ -29,7 +29,7 @@ const Header = () => {
 
           <FormStyle>
             <FaSearch />
-            <input type='text' placeholder='Search for coins,NFTs,...' />
+            <input type='text' placeholder='Search for coins...' />
           </FormStyle>
         </InnerLeft>
       </HeaderLeft>

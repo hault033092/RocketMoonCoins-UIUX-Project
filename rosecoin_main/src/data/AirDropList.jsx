@@ -1,23 +1,23 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { PaginateCoinTable } from '../helpers/PaginateCoinTable'
+import { PaginateAirdropTable } from '../helpers/PaginateAirdropTable'
 
 const CoinsList = () => {
-  const [coins, setCoins] = useState([])
+  const [airDrops, setAirDrops] = useState([])
 
   useEffect(() => {
     axios
-      .get(`/api/services/app/MoonCoinView/GetAllCoinWithFilter`)
+      .get(`https://api.airdropking.io/airdrops/?amount=0`)
       .then((response) => {
-        setCoins(response.data.result)
+        setAirDrops(response.data)
       })
   }, [])
 
   return (
     <>
       <Container>
-        <PaginateCoinTable data={coins} />
+        <PaginateAirdropTable data={airDrops} />
       </Container>
     </>
   )
@@ -32,5 +32,4 @@ const Container = styled.div`
   border: 1px solid var(--golden);
   border-radius: 5px;
 `
-
 export default CoinsList

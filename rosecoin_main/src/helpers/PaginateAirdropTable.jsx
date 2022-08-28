@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate'
 import styled from 'styled-components'
 
-export const PaginateTable = (props) => {
+export const PaginateAirdropTable = (props) => {
   let itemsPerPage = 10
   const { data } = props
   const [pageCount, setPageCount] = useState(0)
@@ -12,68 +12,64 @@ export const PaginateTable = (props) => {
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage
-    // console.log(`Loading items from ${itemOffset} to ${endOffset}`)
     setCurrentItems(data.slice(itemOffset, endOffset))
     setPageCount(Math.ceil(data.length / itemsPerPage))
   }, [itemOffset, itemsPerPage, data])
 
   const handlePageClick = (e) => {
     const newOffset = (e.selected * itemsPerPage) % data.length
-    // console.log(
-    //   `User requested page number ${e.selected}, which is offset ${newOffset}`
-    // )
     setItemOffset(newOffset)
   }
   return (
-    <div>
-      <Container>
-        <Table>
-          <Thead>
-            <tr>
-              <td>Rank</td>
-              <td>Symbol</td>
-              <td>Name</td>
-              <td>Market Cap</td>
-              <td>Price</td>
-              <td>Available Supply</td>
-              <td>Volume(24h)</td>
-            </tr>
-          </Thead>
-
-          <Tbody>
-            {currentItems.map((coin) => {
-              return (
-                <>
-                  <tr key={coin.id}>
-                    <td className='rank'>{coin.rank}</td>
-                    <td>
-                      <a href={coin.websiteUrl} className='logo'>
-                        <img src={coin.logo} alt='coin logo' width='30px' />
-                        <p>{coin.name}</p>
-                      </a>
-                    </td>
-                    <td className='symbol'>{coin.symbol}</td>
-                    <td>{coin.marketCap}</td>
-                    <td>{coin.price}</td>
-                    <td>{coin.availableSupply}</td>
-                    <td>{coin.volume}</td>
-                  </tr>
-                </>
-              )
-            })}
-          </Tbody>
-        </Table>
-      </Container>
+    <>
+      <Table>
+        <Thead>
+          <tr>
+            <td>Logo</td>
+            <td>Name</td>
+            <td>Value</td>
+            <td>Rating</td>
+            <td>Days left</td>
+          </tr>
+        </Thead>
+        <Tbody>
+          {currentItems.map((airdrop) => {
+            return (
+              <>
+                <tr>
+                  <td>
+                    <a
+                      href={airdrop.url_airdrop}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <img
+                        src={airdrop.thumbnail}
+                        alt='coin logo'
+                        width='30px'
+                      />
+                    </a>
+                  </td>
+                  <td>{airdrop.name}</td>
+                  <td>{airdrop.value}</td>
+                  <td>{airdrop.like_ratio}</td>
+                  <td>{airdrop.days_left}</td>
+                </tr>
+              </>
+            )
+          })}
+        </Tbody>
+      </Table>
       <MyPaginate
         breakLabel='...'
-        nextLabel='>'
-        previousLabel='<'
+        nextLabel='>>'
+        previousLabel='<<'
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
         pageCount={pageCount}
         renderOnZeroPageCount={null}
       />
-    </div>
+    </>
   )
 }
 
@@ -92,6 +88,7 @@ const MyPaginate = styled(ReactPaginate).attrs({
     padding: 0.1rem 1rem;
     border: gray 1px solid;
     cursor: pointer;
+    color: var(--golden);
   }
   li.previous a,
   li.next a,
@@ -105,55 +102,39 @@ const MyPaginate = styled(ReactPaginate).attrs({
     min-width: 32px;
   }
   li.disabled a {
-    color: grey;
+    color: black;
   }
   li.disable,
   li.disabled a {
     cursor: default;
   }
 `
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem 0;
-  border: 1px solid var(--golden);
-  border-radius: 5px;
-`
-
 const Table = styled.table`
-  width: 1000px;
+  width: 35rem;
+  height: 80vh;
   border-collapse: separate;
   border-spacing: 0 1rem;
+  td {
+    text-align: center;
+    color: #ebd192;
+  }
 `
 
 const Thead = styled.thead`
   background-color: rgb(44, 44, 44);
-  text-align: center;
-
-  td {
-    color: #ebd192;
-  }
+  /* text-align: center; */
 `
+
 const Tbody = styled.tbody`
   tr {
-    text-align: right;
+    text-align: center;
   }
 
   a {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     gap: 10px;
-  }
-
-  &.rank {
-    text-align: center;
-    font-weight: bold;
-  }
-
-  &.symbol {
-    text-align: center;
+    /* width: 50px; */
+    text-decoration: none;
   }
 `
