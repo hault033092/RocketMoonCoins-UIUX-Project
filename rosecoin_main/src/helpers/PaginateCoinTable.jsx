@@ -22,18 +22,18 @@ export const PaginateCoinTable = (props) => {
     setItemOffset(newOffset)
   }
   return (
-    <div>
+    <Container>
       <h2>Coins</h2>
       <Table>
         <Thead>
           <tr>
             <td>Logo</td>
             <td>Name</td>
-            <td>Chain</td>
+            <td>Symbol</td>
             <td>Market Cap</td>
             <td>Price</td>
-            <td>Change 24h</td>
-            <td>Launch Date</td>
+            {/* <td>Change 24h</td> */}
+            {/* <td>Launch Date</td> */}
             <td>Votes</td>
           </tr>
         </Thead>
@@ -42,21 +42,24 @@ export const PaginateCoinTable = (props) => {
             return (
               <>
                 <tr key={coin.id}>
-                  <td>
-                    <a href={coin.websiteUrl} className='logo'>
-                      <img src={coin.logo} alt='coin logo' width='30px' />
-                    </a>
-                  </td>
-                  <td>
-                    <p>{coin.name}</p>
-                    <p>{coin.symbol}</p>
-                  </td>
-                  <td>{coin.netWorkName}</td>
-                  <td>{coin.marketCap}</td>
-                  <td>{coin.price}</td>
-                  <td>{coin.percent_change_24h}</td>
-                  <td>{coin.countVote}</td>
-                  <VoteButton>Votes</VoteButton>
+                  <a href={coin.websiteUrl}>
+                    <td>
+                      <img src={coin.icon} alt='coin logo' width='30px' />
+                    </td>
+                    <td>
+                      <p>{coin.name}</p>
+                    </td>
+                    <td>
+                      {' '}
+                      <p>{coin.symbol}</p>
+                    </td>
+                    <td>{coin.netWorkName}</td>
+                    <td>{coin.marketCap}</td>
+                    <td>{coin.price}</td>
+                    {/* <td>{coin.percent_change_24h}</td> */}
+                    <td>{coin.countVote}</td>
+                    <VoteButton>Votes</VoteButton>
+                  </a>
                 </tr>
               </>
             )
@@ -72,9 +75,21 @@ export const PaginateCoinTable = (props) => {
         pageCount={pageCount}
         renderOnZeroPageCount={null}
       />
-    </div>
+    </Container>
   )
 }
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 2rem 0;
+  color: var(--theme-golden);
+  /* border: 1px solid var(--theme-golden);
+  border-radius: 5px; */
+  /* width: 1-0; */
+`
 
 const MyPaginate = styled(ReactPaginate).attrs({
   // You can redifine classes here, if you want.
@@ -92,7 +107,7 @@ const MyPaginate = styled(ReactPaginate).attrs({
     padding: 0.1rem 1rem;
     border: gray 1px solid;
     cursor: pointer;
-    color: var(--golden);
+    color: var(--theme-golden);
   }
   li.previous a,
   li.next a,
@@ -100,9 +115,9 @@ const MyPaginate = styled(ReactPaginate).attrs({
     border-color: transparent;
   }
   li.active a {
-    background-color: var(--golden);
+    background-color: var(--theme-golden);
     border-color: transparent;
-    color: var(--navyviolet);
+    color: var(--theme-navyviolet);
     min-width: 32px;
   }
   li.disabled a {
@@ -114,51 +129,61 @@ const MyPaginate = styled(ReactPaginate).attrs({
   }
 `
 const Table = styled.table`
-  width: 65rem;
-  height: 80vh;
-  border-collapse: separate;
-  border-spacing: 0 1rem;
+  color: var(--theme-golden);
+  background-color: var(--theme-navyviolet);
+  width: 60rem;
 
   td {
-    color: #ebd192;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 8rem;
+    overflow: scroll;
   }
 `
 
 const Thead = styled.thead`
-  background-color: rgb(44, 44, 44);
-  /* width: 100%; */
-  height: 3rem;
+  tr {
+    background-color: var(--theme-midnightdark);
+    display: flex;
+    height: 3.5rem;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--theme-golden);
+    border-radius: 5px;
+  }
 `
 
 const Tbody = styled.tbody`
   tr {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
   }
+  background-color: var(--theme-grey-light);
 
   a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 10px;
+    text-decoration: none;
+    color: var(--theme-golden);
+    height: 4.5rem;
+    width: 60rem;
+    border: 1px solid var(--theme-grey);
+    border-radius: 5px;
   }
 
-  &.rank {
-    text-align: center;
-    font-weight: bold;
-  }
-
-  &.symbol {
-    text-align: center;
+  a:hover {
+    transition: all 0.4s ease-in-out;
+    background-color: var(--theme-grey-dark);
   }
 `
 
 const VoteButton = styled.button`
   background: linear-gradient(
     to bottom right,
-    var(--darkgolden) 0%,
-    var(--lightgolden) 50%,
-    var(--darkgolden) 100%
+    var(--theme-darkgolden) 0%,
+    var(--theme-lightgolden) 50%,
+    var(--theme-darkgolden) 100%
   );
   background-size: 200% 100%;
   text-transform: uppercase;
@@ -167,13 +192,14 @@ const VoteButton = styled.button`
   border: none;
   font-family: var(--font-main);
   font-size: medium;
-  color: var(--midnightdark);
+  color: var(--theme-midnightdark);
   border-radius: 2rem;
 
   cursor: pointer;
   transition: all 0.4s ease-in-out;
   &:hover {
-    box-shadow: 0 1px 5px 0 var(--golden), 0 1px 6px 0 var(--darkgolden);
+    box-shadow: 0 1px 5px 0 var(--theme-golden),
+      0 1px 6px 0 var(--theme-darkgolden);
     background-position: 100% 50%;
     transition: all 0.4s ease-in-out;
   }

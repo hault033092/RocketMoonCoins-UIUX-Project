@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import logo from '../assets/logos/footer_logo.svg'
-import SocialNetwork from './SocialNetwork'
+import logo from '../../assets/logos/footer_logo.svg'
+import NaviLinks from '../Header/NaviLinks'
+import SocialNetwork from '../SocialNetwork'
 
 const Footer = () => {
   return (
@@ -11,7 +12,8 @@ const Footer = () => {
 
       <FooterMid>
         <NavLinkContainer>
-          {/* <NavLinks to='/'>HOME</NavLinks> */}
+          <NaviLinks />
+          {/* <NavLinks to='/'>HOME</NavLinks>
 
           <NavLinks to='/submitcoin'>SUBMIT COIN</NavLinks>
 
@@ -19,7 +21,7 @@ const Footer = () => {
 
           <NavLinks to='/contactus'>CONTACT US</NavLinks>
 
-          <NavLinks to='/aboutus'>ABOUT US</NavLinks>
+          <NavLinks to='/aboutus'>ABOUT US</NavLinks> */}
         </NavLinkContainer>
         <h3>ROSECOIN COMPANY LTD.</h3>
       </FooterMid>
@@ -37,7 +39,7 @@ const Container = styled.div`
   padding: 0rem 3rem;
   width: 100%;
   height: 200px;
-  background: var(--midnightdark);
+  background: var(--theme-midnightdark);
 
   .footer-logo {
     width: 150px;
@@ -75,7 +77,7 @@ const NavLinks = styled(Link)`
     display: block;
     width: 0;
     height: 1px;
-    background: var(--golden);
+    background: var(--theme-golden);
     transition: width 0.3s;
   }
 

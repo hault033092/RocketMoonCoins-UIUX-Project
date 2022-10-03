@@ -16,20 +16,18 @@ const CoinsList = () => {
 
   return (
     <>
-      <Container>
-        <PaginateAirdropTable data={airDrops} />
-      </Container>
+      <PaginateAirdropTable data={airDrops} />
     </>
   )
 }
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
-  border: 1px solid var(--golden);
-  border-radius: 5px;
-`
+// const Container = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 2rem 0;
+//   border: 1px solid var(--theme-golden);
+//   border-radius: 5px;
+// `
 export default CoinsList

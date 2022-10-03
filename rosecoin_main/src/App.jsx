@@ -1,14 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import Pages from './pages/Pages'
-import Footer from './components/Footer'
-import Header from './components/Header'
+import Footer from './components/Footer/Footer'
+import Header from './components/Header/Header'
+import Hamburger from './components/Header/Hamburger'
+import SideNav from './components/Header/SideNav'
+import { useOnClickOutside } from './hooks/useOnClickOutside'
+
 const App = () => {
+  const [open, setOpen] = useState(false)
+  const node = useRef()
+  useOnClickOutside(node, () => setOpen(false))
+
   return (
     <>
       <GlobalStyle />
       <Header />
       <PageContainer>
+        {/* <div ref={node}>
+          <Hamburger open={open} setOpen={setOpen} />
+          <SideNav open={open} setOpen={setOpen} />
+        </div> */}
         <Pages />
       </PageContainer>
       <Footer />
@@ -27,15 +39,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   :root {
+  //Fonts
   --font-main: 'Vidaloka', serif;
 
-  --golden: #ebd192;
-  --darkgolden: #c08c13;
-  --lightgolden: #f1e6cb;
-  --midnightdark: #1a1a1a;
-  --navyviolet: #262838;
+  //Colors
+  --theme-golden: #ebd192;
+  --theme-darkgolden: #c08c13;
+  --theme-lightgolden: #f1e6cb;
+  --theme-midnightdark: #1a1a1a;
+  --theme-navyviolet: #262838;
   --theme-grey: #2b3046;
   --theme-grey-light: #2b3046ab;
+  --theme-grey-dark: #121319ab;
   --theme-orange: #b02500;
   --theme-orange-light: #d32c00;
   --theme-blue: #82c0b9;
@@ -44,13 +59,17 @@ const GlobalStyle = createGlobalStyle`
   --theme-error: #b00020;
   --theme-border-rounded: 8px;
   --theme-primary-font: "Raleway";
+
+  //View sizes
+  --small-view: 1300px;
+  
 }
 
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--navyviolet);
-    /* width: 100%;
-    height: 100%; */
+    background: var(--theme-navyviolet);
+    min-height: 100vh;
+    overflow: auto;
   }
 `
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate'
 import styled from 'styled-components'
+import CoinsList from '../data/CoinsList'
 
 export const PaginateAirdropTable = (props) => {
   let itemsPerPage = 10
@@ -21,7 +22,8 @@ export const PaginateAirdropTable = (props) => {
     setItemOffset(newOffset)
   }
   return (
-    <>
+    <Container>
+      <h2>Airdrops</h2>
       <Table>
         <Thead>
           <tr>
@@ -37,23 +39,23 @@ export const PaginateAirdropTable = (props) => {
             return (
               <>
                 <tr>
-                  <td>
-                    <a
-                      href={airdrop.url_airdrop}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
+                  <a
+                    href={airdrop.url_airdrop}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <td>
                       <img
                         src={airdrop.thumbnail}
                         alt='coin logo'
                         width='30px'
                       />
-                    </a>
-                  </td>
-                  <td>{airdrop.name}</td>
-                  <td>{airdrop.value}</td>
-                  <td>{airdrop.like_ratio}</td>
-                  <td>{airdrop.days_left}</td>
+                    </td>
+                    <td>{airdrop.name}</td>
+                    <td>{airdrop.value}</td>
+                    <td>{airdrop.like_ratio}</td>
+                    <td>{airdrop.days_left}</td>
+                  </a>
                 </tr>
               </>
             )
@@ -69,9 +71,23 @@ export const PaginateAirdropTable = (props) => {
         pageCount={pageCount}
         renderOnZeroPageCount={null}
       />
-    </>
+    </Container>
   )
 }
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 2rem 0;
+  height: 100%;
+  color: var(--theme-golden);
+
+  /* border: 1px solid var(--theme-golden);
+  border-radius: 5px; */
+  /* width: 1-0; */
+`
 
 const MyPaginate = styled(ReactPaginate).attrs({
   // You can redifine classes here, if you want.
@@ -81,6 +97,7 @@ const MyPaginate = styled(ReactPaginate).attrs({
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   list-style-type: none;
   padding: 0 5rem;
   li a {
@@ -88,7 +105,7 @@ const MyPaginate = styled(ReactPaginate).attrs({
     padding: 0.1rem 1rem;
     border: gray 1px solid;
     cursor: pointer;
-    color: var(--golden);
+    color: var(--theme-golden);
   }
   li.previous a,
   li.next a,
@@ -96,9 +113,9 @@ const MyPaginate = styled(ReactPaginate).attrs({
     border-color: transparent;
   }
   li.active a {
-    background-color: var(--golden);
+    background-color: var(--theme-golden);
     border-color: transparent;
-    color: var(--navyviolet);
+    color: var(--theme-navyviolet);
     min-width: 32px;
   }
   li.disabled a {
@@ -110,31 +127,48 @@ const MyPaginate = styled(ReactPaginate).attrs({
   }
 `
 const Table = styled.table`
-  width: 35rem;
-  height: 80vh;
-  border-collapse: separate;
-  border-spacing: 0 1rem;
+  /* color: var(--theme-golden); */
+  /* background-color: var(--theme-navyviolet); */
+  background-color: var(--theme-grey-light);
   td {
-    text-align: center;
-    color: #ebd192;
+    display: flex;
+    justify-content: center;
+    width: 5rem;
   }
 `
 
 const Thead = styled.thead`
-  background-color: rgb(44, 44, 44);
-  /* text-align: center; */
+  tr {
+    background-color: var(--theme-midnightdark);
+    display: flex;
+    height: 3.5rem;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--theme-golden);
+    border-radius: 5px;
+  }
 `
 
 const Tbody = styled.tbody`
   tr {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
   }
 
   a {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    gap: 10px;
-    /* width: 50px; */
     text-decoration: none;
+    color: var(--theme-golden);
+    height: 4.5rem;
+    width: 35rem;
+    border: 1px solid var(--theme-grey);
+    border-radius: 5px;
+  }
+
+  a:hover {
+    transition: all 0.4s ease-in-out;
+    background-color: var(--theme-grey-dark);
   }
 `

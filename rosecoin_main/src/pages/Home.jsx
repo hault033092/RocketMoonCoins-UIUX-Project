@@ -32,11 +32,11 @@ const Home = () => {
 const TableContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  border: 1px solid var(--golden);
-  border-radius: 10px;
-  width: 110rem;
-  height: 100vh;
+  /* align-items: center; */
+  /* border: 1px solid var(--theme-golden);
+  border-radius: 10px; */
+  width: 90%;
+  height: 100%;
 `
 
 export default Home

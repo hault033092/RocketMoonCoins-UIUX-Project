@@ -2,7 +2,6 @@
   "name": "main",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://45.119.83.239:8181",
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@splidejs/react-splide": "^0.7.8",
@@ -15,6 +14,7 @@
     "classnames": "^2.3.1",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^7.1.0",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",

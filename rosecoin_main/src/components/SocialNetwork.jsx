@@ -17,51 +17,81 @@ const SocialNetwork = () => {
   const LinkedinBackground =
     'linear-gradient(to right, #9fd8e9 0%, #2f7e99 100%)'
   return (
-    <IconContainer>
-      <a
-        href='http://facebook.com/rosecoinweb3'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <Icon color={FacebookBackground}>
-          <FaFacebookSquare />
-        </Icon>
-      </a>
-      <a
-        href='https://t.me/+pUHV2j1VFpR'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <Icon color={TelegramBackground}>
-          <FaTelegram />
-        </Icon>
-      </a>
-      <a
-        href='https://t.me/+pUHV2j1VFpR'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <Icon color={TwitterBackground}>
-          <FaTwitterSquare />
-        </Icon>
-      </a>
-      <a href='http://bit.ly/3zjSEiM' target='_blank' rel='noopener noreferrer'>
-        <Icon color={LinkedinBackground}>
-          <FaLinkedin />
-        </Icon>
-      </a>
-    </IconContainer>
+    <Container>
+      <h2>CONNECT US</h2>
+      <IconContainer>
+        <a
+          href='http://facebook.com/rosecoinweb3'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Icon color={FacebookBackground}>
+            <FaFacebookSquare />
+          </Icon>
+        </a>
+        <a
+          href='https://t.me/+pUHV2j1VFpR'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Icon color={TelegramBackground}>
+            <FaTelegram />
+          </Icon>
+        </a>
+        <a
+          href='https://t.me/+pUHV2j1VFpR'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Icon color={TwitterBackground}>
+            <FaTwitterSquare />
+          </Icon>
+        </a>
+        <a
+          href='http://bit.ly/3zjSEiM'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Icon color={LinkedinBackground}>
+            <FaLinkedin />
+          </Icon>
+        </a>
+      </IconContainer>
+    </Container>
   )
 }
+
+const Container = styled.div`
+  display: flex;
+  width: 15rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: var(--theme-golden);
+    font-family: var(--font-main);
+  }
+  @media (max-width: 1300px) {
+    display: none;
+    width: 17rem;
+    height: 10rem;
+    justify-content: center;
+
+    h2 {
+      font-size: 14px;
+    }
+  }
+`
 
 const IconContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 6rem;
+  height: 5rem;
   padding: 0rem 1rem;
-  border: 3px solid var(--golden);
+  border: 3px solid var(--theme-golden);
   border-radius: 30px;
 
   a {
@@ -72,6 +102,13 @@ const IconContainer = styled.div`
   a:hover {
     margin-bottom: 10px;
     transition: all 0.2s ease-in-out;
+  }
+
+  @media (max-width: 1300px) {
+    width: 80%;
+    height: 2.5rem;
+    border: 2px solid var(--theme-golden);
+    border-radius: 30px;
   }
 `
 
