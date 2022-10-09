@@ -6,11 +6,13 @@ import AdBannerLarge from '../components/AdBannerLarge'
 import CoinsList from '../data/CoinsList'
 import AirDropList from '../data/AirDropList'
 import NftList from '../data/NftList'
+import { PromotedTable } from '../helpers/PromotedTable'
 
 const Home = () => {
   return (
     <>
-      <Promoted />
+      {/* <Promoted /> */}
+      <PromotedTable />
       <AdBannerSmall />
       <TableContainer>
         <CoinsList />

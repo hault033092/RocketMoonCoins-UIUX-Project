@@ -64,7 +64,6 @@ const HeadingContainer = styled.div`
   align-items: center;
   padding: 0 1rem;
   height: 5vh;
-  border: 1px solid var(--theme-midnightdark);
 `
 
 const Table = styled.table`

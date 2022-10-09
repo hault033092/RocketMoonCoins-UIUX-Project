@@ -48,7 +48,7 @@ export const PaginateAirdropTable = (props) => {
                       <img
                         src={airdrop.thumbnail}
                         alt='coin logo'
-                        width='30px'
+                        width='30%'
                       />
                     </td>
                     <td>{airdrop.name}</td>
@@ -130,10 +130,12 @@ const Table = styled.table`
   /* color: var(--theme-golden); */
   /* background-color: var(--theme-navyviolet); */
   background-color: var(--theme-grey-light);
+  width: 35rem;
+
   td {
     display: flex;
     justify-content: center;
-    width: 5rem;
+    width: 7rem;
   }
 `
 
@@ -155,6 +157,10 @@ const Tbody = styled.tbody`
     justify-content: space-around;
   }
 
+  td {
+    font-size: 0.9rem;
+  }
+
   a {
     display: flex;
     justify-content: space-around;
@@ -162,7 +168,7 @@ const Tbody = styled.tbody`
     text-decoration: none;
     color: var(--theme-golden);
     height: 4.5rem;
-    width: 35rem;
+    width: 100%;
     border: 1px solid var(--theme-grey);
     border-radius: 5px;
   }

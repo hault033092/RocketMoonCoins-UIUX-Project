@@ -33,7 +33,7 @@ const CoinsList = () => {
 //   flex-direction: column;
 //   justify-content: center;
 //   align-items: center;
-//   margin: 2rem 0;
+//   margin: 2rem 0;`
 //   border: 1px solid var(--theme-golden);
 //   border-radius: 5px;
 // `

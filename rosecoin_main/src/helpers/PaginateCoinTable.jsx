@@ -1,8 +1,8 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate'
 import styled from 'styled-components'
 import Select from 'react-select'
+import { VoteButton } from '../components/VoteButton'
 
 export const PaginateCoinTable = (props) => {
   let itemsPerPage = 10
@@ -50,15 +50,16 @@ export const PaginateCoinTable = (props) => {
                       <p>{coin.name}</p>
                     </td>
                     <td>
-                      {' '}
                       <p>{coin.symbol}</p>
                     </td>
-                    <td>{coin.netWorkName}</td>
-                    <td>{coin.marketCap}</td>
-                    <td>{coin.price}</td>
+                    {/* <td>{coin.netWorkName}</td> */}
+                    <td>{coin.marketCap} USD</td>
+                    <td>{coin.price} USD</td>
                     {/* <td>{coin.percent_change_24h}</td> */}
-                    <td>{coin.countVote}</td>
-                    <VoteButton>Votes</VoteButton>
+                    {/* <td>{coin.countVote}</td> */}
+                    <td>
+                      <VoteButton>{coin.countVote}</VoteButton>
+                    </td>
                   </a>
                 </tr>
               </>
@@ -86,6 +87,7 @@ const Container = styled.div`
   align-items: center;
   margin: 2rem 0;
   color: var(--theme-golden);
+  /* width: 70rem; */
   /* border: 1px solid var(--theme-golden);
   border-radius: 5px; */
   /* width: 1-0; */
@@ -129,15 +131,15 @@ const MyPaginate = styled(ReactPaginate).attrs({
   }
 `
 const Table = styled.table`
-  color: var(--theme-golden);
+  /* color: var(--theme-golden); */
   background-color: var(--theme-navyviolet);
-  width: 60rem;
+  width: 55rem;
 
   td {
     display: flex;
     justify-content: center;
-    width: 8rem;
-    overflow: scroll;
+    width: 7rem;
+    overflow: hidden;
   }
 `
 
@@ -154,11 +156,16 @@ const Thead = styled.thead`
 `
 
 const Tbody = styled.tbody`
+  background-color: var(--theme-grey-light);
+
   tr {
     display: flex;
     justify-content: space-around;
   }
-  background-color: var(--theme-grey-light);
+
+  td {
+    font-size: 0.9rem;
+  }
 
   a {
     display: flex;
@@ -167,7 +174,7 @@ const Tbody = styled.tbody`
     text-decoration: none;
     color: var(--theme-golden);
     height: 4.5rem;
-    width: 60rem;
+    width: 100%;
     border: 1px solid var(--theme-grey);
     border-radius: 5px;
   }
@@ -178,29 +185,29 @@ const Tbody = styled.tbody`
   }
 `
 
-const VoteButton = styled.button`
-  background: linear-gradient(
-    to bottom right,
-    var(--theme-darkgolden) 0%,
-    var(--theme-lightgolden) 50%,
-    var(--theme-darkgolden) 100%
-  );
-  background-size: 200% 100%;
-  text-transform: uppercase;
-  width: 75px;
-  height: 35px;
-  border: none;
-  font-family: var(--font-main);
-  font-size: medium;
-  color: var(--theme-midnightdark);
-  border-radius: 2rem;
+// const VoteButton = styled.button`
+//   background: linear-gradient(
+//     to bottom right,
+//     var(--theme-darkgolden) 0%,
+//     var(--theme-lightgolden) 50%,
+//     var(--theme-darkgolden) 100%
+//   );
+//   background-size: 200% 100%;
+//   text-transform: uppercase;
+//   width: 75px;
+//   height: 35px;
+//   border: none;
+//   font-family: var(--font-main);
+//   font-size: medium;
+//   color: var(--theme-midnightdark);
+//   border-radius: 2rem;
 
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
-  &:hover {
-    box-shadow: 0 1px 5px 0 var(--theme-golden),
-      0 1px 6px 0 var(--theme-darkgolden);
-    background-position: 100% 50%;
-    transition: all 0.4s ease-in-out;
-  }
-`
+//   cursor: pointer;
+//   transition: all 0.4s ease-in-out;
+//   &:hover {
+//     box-shadow: 0 1px 5px 0 var(--theme-golden),
+//       0 1px 6px 0 var(--theme-darkgolden);
+//     background-position: 100% 50%;
+//     transition: all 0.4s ease-in-out;
+//   }
+// `
