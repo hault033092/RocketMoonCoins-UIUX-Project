@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
   --theme-darkgolden: #c08c13;
   --theme-lightgolden: #f1e6cb;
   --theme-midnightdark: #1a1a1a;
-  --theme-navyviolet: #262838;
+  --theme-navyviolet: #151c4b;
   --theme-grey: #2b3046;
   --theme-grey-light: #2b3046ab;
   --theme-grey-dark: #121319ab;
