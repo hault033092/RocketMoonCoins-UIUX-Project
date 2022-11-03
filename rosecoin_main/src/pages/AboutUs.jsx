@@ -100,7 +100,7 @@ const Content1 = styled.div`
   padding: 1.5rem;
   width: 100%;
   height: 100%;
-  color: var(--golden);
+  color: var(--darkgolden);
   h3 {
     text-align: center;
   }
