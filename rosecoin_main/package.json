@@ -1,6 +1,7 @@
 {
   "name": "main",
   "version": "0.1.0",
+  "proxy": "https://rosecoin.app",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -16,6 +17,8 @@
     "framer-motion": "^7.1.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-cookie": "^4.1.1",
+    "react-cookie-consent": "^8.0.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-paginate": "^8.1.3",

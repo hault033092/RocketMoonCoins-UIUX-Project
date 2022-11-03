@@ -79,9 +79,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  align-items: center;
+  /* align-items: center; */
   margin: 2rem 0;
-  height: 100%;
+
   color: var(--theme-golden);
 
   /* border: 1px solid var(--theme-golden);
@@ -131,7 +131,7 @@ const Table = styled.table`
   /* background-color: var(--theme-navyviolet); */
   background-color: var(--theme-grey-light);
   width: 35rem;
-
+  height: 100vh;
   td {
     display: flex;
     justify-content: center;
@@ -167,7 +167,7 @@ const Tbody = styled.tbody`
     align-items: center;
     text-decoration: none;
     color: var(--theme-golden);
-    height: 4.5rem;
+    height: 10vh;
     width: 100%;
     border: 1px solid var(--theme-grey);
     border-radius: 5px;

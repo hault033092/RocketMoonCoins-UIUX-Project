@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
-import images from '../assets/images/banner_demo.jpg'
+import gifs from '../../assets/gifs/demo.gif'
 
 const AdBannerLarge = () => {
   return (
@@ -19,7 +19,7 @@ const AdBannerLarge = () => {
         <SplideSlide className='SlideItem'>
           <Link to='/contactus'>
             <img
-              src={images}
+              src={gifs}
               alt='large ad banner'
               style={{ width: '1000px', height: '250px' }}
             />
@@ -28,7 +28,7 @@ const AdBannerLarge = () => {
         <SplideSlide className='SlideItem'>
           <Link to='/contactus'>
             <img
-              src={images}
+              src={gifs}
               alt='large ad banner'
               style={{ width: '1000px', height: '250px' }}
             />
@@ -37,7 +37,7 @@ const AdBannerLarge = () => {
         <SplideSlide className='SlideItem'>
           <Link to='/contactus'>
             <img
-              src={images}
+              src={gifs}
               alt='large ad banner'
               style={{ width: '1000px', height: '250px' }}
             />

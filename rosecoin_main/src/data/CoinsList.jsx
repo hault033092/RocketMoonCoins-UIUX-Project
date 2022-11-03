@@ -6,19 +6,22 @@ import { PaginateCoinTable } from '../helpers/PaginateCoinTable'
 const CoinsList = () => {
   const [coins, setCoins] = useState([])
 
+  const headers = {
+    'access-control-allow-origin': '*',
+  }
+
   useEffect(() => {
-    // axios
-    //   .get(
-    //     `https://45.119.83.239:8181/api/services/app/MoonCoinView/GetAllCoinWithFilter`
-    //   )
-    //   .then((response) => {
-    //     setCoins(response.data.result)
-    //   })
     axios
-      .get(`https://api.coinstats.app/public/v1/coins?skip=0&limit=100¤cy=USD`)
+      .get(`/api/services/app/MoonCoinView/GetAllCoinWithFilter`)
       .then((response) => {
-        setCoins(response.data.coins)
+        setCoins(response.data.result)
       })
+    console.log(coins)
+    // axios
+    //   .get(`https://api.coinstats.app/public/v1/coins?skip=0&limit=100¤cy=USD`)
+    //   .then((response) => {
+    //     setCoins(response.data.coins)
+    //   })
   }, [])
 
   return (

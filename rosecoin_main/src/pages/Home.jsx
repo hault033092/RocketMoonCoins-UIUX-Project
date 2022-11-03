@@ -1,17 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import Promoted from '../components/Promoted'
-import AdBannerSmall from '../components/AdBannerSmall'
-import AdBannerLarge from '../components/AdBannerLarge'
+import AdBannerSmall from '../components/Ads/AdBannerSmall'
+import AdBannerLarge from '../components/Ads/AdBannerLarge'
 import CoinsList from '../data/CoinsList'
 import AirDropList from '../data/AirDropList'
 import NftList from '../data/NftList'
 import { PromotedTable } from '../helpers/PromotedTable'
+import PopupAd from '../components/Ads/PopupAd'
+import BottomBanner from '../components/Ads/BottomBanner'
 
 const Home = () => {
   return (
     <>
       {/* <Promoted /> */}
+      <PopupAd />
       <PromotedTable />
       <AdBannerSmall />
       <TableContainer>
@@ -20,6 +23,7 @@ const Home = () => {
       </TableContainer>
       <AdBannerLarge />
       <NftList />
+      <BottomBanner />
     </>
   )
 }

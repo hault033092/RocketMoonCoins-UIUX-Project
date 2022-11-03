@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import Hamburger from './components/Header/Hamburger'
 import SideNav from './components/Header/SideNav'
 import { useOnClickOutside } from './hooks/useOnClickOutside'
+import BottomBanner from './components/Ads/BottomBanner'
 
 const App = () => {
   const [open, setOpen] = useState(false)
@@ -17,13 +18,10 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <PageContainer>
-        {/* <div ref={node}>
-          <Hamburger open={open} setOpen={setOpen} />
-          <SideNav open={open} setOpen={setOpen} />
-        </div> */}
         <Pages />
       </PageContainer>
       <Footer />
+      <BottomBanner />
     </>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import images from '../assets/images/banner_demo.jpg'
+import images from '../../assets/images/banner_demo.jpg'
 
 const AdBannerSmall = () => {
   return (

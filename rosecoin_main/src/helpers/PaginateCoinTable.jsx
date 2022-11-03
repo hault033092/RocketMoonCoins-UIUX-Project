@@ -3,6 +3,7 @@ import ReactPaginate from 'react-paginate'
 import styled from 'styled-components'
 import Select from 'react-select'
 import { VoteButton } from '../components/VoteButton'
+import { Link } from 'react-router-dom'
 
 export const PaginateCoinTable = (props) => {
   let itemsPerPage = 10
@@ -42,9 +43,9 @@ export const PaginateCoinTable = (props) => {
             return (
               <>
                 <tr key={coin.id}>
-                  <a href={coin.websiteUrl}>
+                  <Link to={'/coin/' + coin.id}>
                     <td>
-                      <img src={coin.icon} alt='coin logo' width='30px' />
+                      <img src={coin.logo} alt='coin logo' width='30px' />
                     </td>
                     <td>
                       <p>{coin.name}</p>
@@ -60,7 +61,7 @@ export const PaginateCoinTable = (props) => {
                     <td>
                       <VoteButton>{coin.countVote}</VoteButton>
                     </td>
-                  </a>
+                  </Link>
                 </tr>
               </>
             )
@@ -87,6 +88,7 @@ const Container = styled.div`
   align-items: center;
   margin: 2rem 0;
   color: var(--theme-golden);
+
   /* width: 70rem; */
   /* border: 1px solid var(--theme-golden);
   border-radius: 5px; */
@@ -134,6 +136,7 @@ const Table = styled.table`
   /* color: var(--theme-golden); */
   background-color: var(--theme-navyviolet);
   width: 55rem;
+  height: 100vh;
 
   td {
     display: flex;
@@ -167,13 +170,13 @@ const Tbody = styled.tbody`
     font-size: 0.9rem;
   }
 
-  a {
+  Link {
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-decoration: none;
     color: var(--theme-golden);
-    height: 4.5rem;
+    height: 10vh;
     width: 100%;
     border: 1px solid var(--theme-grey);
     border-radius: 5px;
