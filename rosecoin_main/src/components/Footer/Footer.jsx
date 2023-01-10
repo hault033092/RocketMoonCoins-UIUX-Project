@@ -55,6 +55,10 @@ const FooterMid = styled.div`
   width: 50%;
   height: 35%;
   margin-left: 0px;
+
+  &h3{
+    color: var(--theme--golden)
+  }
 `
 
 const NavLinkContainer = styled.div`

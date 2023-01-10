@@ -96,11 +96,11 @@ const Content1 = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: var(--navyviolet);
+  background-color: var(--theme--navyviolet);
   padding: 1.5rem;
   width: 100%;
   height: 100%;
-  color: var(--darkgolden);
+  color: white;
   h3 {
     text-align: center;
   }
@@ -112,11 +112,11 @@ const Content2 = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: var(--golden);
+  background-color: var(--theme-golden);
   padding: 1.5rem;
   width: 100%;
   height: 100%;
-  color: black;
+  color: var(--navyviolet);
   h3 {
     text-align: center;
   }
